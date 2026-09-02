@@ -2,7 +2,7 @@ backend:
   name: github
   repo: sadeghghafuri/shahtame
   branch: main
-  base_url: https://https://shahtame-auth.shahtame.workers.dev # آدرس ورکر شما
+  base_url: https://shahtame-auth.shahtame.workers.dev
   auth_endpoint: /auth
 
 media_folder: "images"
