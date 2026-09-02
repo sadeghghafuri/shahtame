@@ -2,7 +2,7 @@ backend:
   name: github
   repo: sadeghghafuri/shahtame
   branch: main
-  auth_type: implicit # استفاده از روش مستقیم بدون نیاز به سرور واسط
+  auth_type: implicit
 
 media_folder: "images"
 public_folder: "/images"
