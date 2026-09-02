@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: sadeghghafuri/shahtame # آدرس دقیق ریپازیتوری شما
   branch: main
 
 media_folder: "images"
