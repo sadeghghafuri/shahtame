@@ -1,7 +1,10 @@
 backend:
-  name: git-gateway
-  repo: sadeghghafuri/shahtame # آدرس دقیق ریپازیتوری شما
+  name: github
+  repo: sadeghghafuri/shahtame
   branch: main
+  base_url: https://api.decapcms.org
+  auth_endpoint: /auth
+  app_id: Ov23liLn4oNeeBebqBvt
 
 media_folder: "images"
 public_folder: "/images"
