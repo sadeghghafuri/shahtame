@@ -2,9 +2,7 @@ backend:
   name: github
   repo: sadeghghafuri/shahtame
   branch: main
-  base_url: https://api.decapcms.org
-  auth_endpoint: /auth
-  app_id: Ov23liLn4oNeeBebqBvt
+  auth_type: implicit # استفاده از روش مستقیم بدون نیاز به سرور واسط
 
 media_folder: "images"
 public_folder: "/images"
