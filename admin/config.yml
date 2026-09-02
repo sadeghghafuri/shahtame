@@ -2,7 +2,8 @@ backend:
   name: github
   repo: sadeghghafuri/shahtame
   branch: main
-  auth_type: implicit
+  base_url: https://https://shahtame-auth.shahtame.workers.dev/ # آدرس ورکر شما
+  auth_endpoint: /auth
 
 media_folder: "images"
 public_folder: "/images"
