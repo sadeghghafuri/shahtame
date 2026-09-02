@@ -1,0 +1,509 @@
+<!DOCTYPE html><html class="dark scroll-smooth" dir="rtl" lang="fa" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>شاه طعم - ادویه‌جات لوکس</title>
+<!-- Optimize Font Loading -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-secondary-fixed-variant": "#5d4201",
+                "error": "#ffb4ab",
+                "outline": "#a88a7e",
+                "on-secondary-container": "#dab36a",
+                "on-secondary": "#412d00",
+                "inverse-surface": "#e5e2e1",
+                "surface-container-low": "#1c1b1b",
+                "tertiary-container": "#929090",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "on-primary": "#571e00",
+                "on-surface-variant": "#e0c0b2",
+                "surface-bright": "#3a3939",
+                "primary": "#ffb595",
+                "tertiary": "#c8c6c5",
+                "on-error-container": "#ffdad6",
+                "secondary": "#e9c176",
+                "surface-container-high": "#2a2a2a",
+                "surface-container": "#1a1a1a",
+                "on-tertiary-fixed-variant": "#474746",
+                "surface-container-highest": "#353534",
+                "on-background": "#e5e2e1",
+                "secondary-fixed-dim": "#e9c176",
+                "aged-gold": "#c5a059",
+                "on-primary-fixed": "#351000",
+                "on-primary-container": "#4c1a00",
+                "background": "#131313",
+                "inverse-on-surface": "#313030",
+                "secondary-fixed": "#ffdea5",
+                "burnt-copper": "#d35400",
+                "tertiary-fixed": "#e5e2e1",
+                "surface-container-lowest": "#0e0e0e",
+                "on-tertiary": "#313030",
+                "secondary-container": "#604403",
+                "inverse-primary": "#a23f00",
+                "on-surface": "#e5e2e1",
+                "primary-fixed": "#ffdbcd",
+                "on-tertiary-container": "#2a2a29",
+                "primary-container": "#ee671c",
+                "surface": "#131313",
+                "surface-dim": "#131313",
+                "surface-variant": "#353534",
+                "on-tertiary-fixed": "#1c1b1b",
+                "surface-tint": "#ffb595",
+                "on-error": "#690005",
+                "on-secondary-fixed": "#261900",
+                "primary-fixed-dim": "#ffb595",
+                "error-container": "#93000a",
+                "on-primary-fixed-variant": "#7c2e00",
+                "outline-variant": "#594238"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "container-max": "1280px",
+                "margin-mobile": "16px",
+                "base-unit": "8px"
+        },
+        "fontFamily": {
+                "body-md": [
+                        "Vazirmatn"
+                ],
+                "display-lg": [
+                        "Vazirmatn"
+                ],
+                "headline-xl": [
+                        "Vazirmatn"
+                ],
+                "display-lg-mobile": [
+                        "Vazirmatn"
+                ],
+                "label-sm": [
+                        "Vazirmatn"
+                ],
+                "headline-lg": [
+                        "Vazirmatn"
+                ],
+                "body-lg": [
+                        "Vazirmatn"
+                ]
+        },
+        "fontSize": {
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "64px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-xl": [
+                        "32px",
+                        {
+                                "lineHeight": "44px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "48px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .spice-glow {
+            box-shadow: 0 0 40px rgba(211, 84, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- Header (Shared Component) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-background/60 border-secondary/10 shadow-xl border-b backdrop-blur-xl max-w-[1200px] mx-auto rounded-bl-[23px] rounded-br-[23px]">
+<div class="flex justify-between items-center h-16 w-full max-w-container-max mx-auto px-10"><div class="flex items-center gap-8"><button aria-label="Open Menu" class="md:hidden flex items-center text-secondary hover:text-primary transition-colors mr-2" id="mobile-menu-toggle"><svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><div class="font-headline-xl text-headline-xl text-secondary tracking-tighter"><a href="index.html" class="hover:text-primary transition-colors">شاه طعم</a></div><nav class="hidden md:flex gap-8"><a class="font-label-sm text-label-sm text-secondary border-b-2 border-secondary pb-1 scale-95 duration-200" href="index.html">خانه</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all duration-300" href="shop.html">فروشگاه ادویه</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all duration-300" href="#">درباره ما</a><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all duration-300" href="#">تماس</a></nav></div><div class="flex items-center text-secondary hover:text-primary transition-all duration-300 cursor-pointer gap-4"><div class="flex items-center gap-2 group/search">
+<div class="relative flex items-center">
+<input class="w-0 h-8 bg-secondary/10 border-none rounded-full px-0 text-label-sm text-secondary transition-all duration-300 focus:ring-1 focus:ring-secondary/30 group-hover/search:w-40 group-hover/search:px-4 group-focus-within/search:w-40 group-focus-within/search:px-4 overflow-hidden" placeholder="جستجو..." type="text">
+<button aria-label="Search" class="text-secondary hover:text-primary transition-colors">
+<svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.3-4.3"></path>
+</svg>
+</button>
+</div>
+</div>
+<a aria-label="View Cart" class="hover:text-primary transition-colors" href="cart.html"><div class="relative">
+<svg class="w-6 h-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+<span class="absolute -top-2 -right-2 bg-primary text-on-primary text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full border border-background">2</span>
+</div></a>
+</div></div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative w-full flex items-center justify-center overflow-hidden h-[600px]">
+<div class="absolute inset-0 z-0" id="hero-slider">
+<div class="hero-slide bg-cover bg-center absolute inset-0 w-full h-full transition-transform duration-1000 ease-in-out" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBijFc7vfvEg4Ko-YDUxcbzGyjHoBFV0paqCBRF-TfKhJq1DNZwk0TNaKadWgF4WY8UnM85mBfm3Mbco3h3QKsVZJUjzDyhoSLTI06YWxTMk_3p1fmHrujjrfWamm8VvxJdc_gwm3YHocRx597XJaXOosveE0GT_rrmusQqGKRFwcL2UGijY3DVxi8cAPCLB_veX59G0vB6xrlp2hZpxT-v2-R-dW2RUS8tZAlpm-0gBo4QAMq4DME&quot;); transform: translateX(-100%); transition: transform 1s ease-in-out;"></div>
+<div class="hero-slide bg-cover bg-center absolute inset-0 w-full h-full transition-transform duration-1000 ease-in-out" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAScSKcPw5A8MTUtBM_OthV3fpUCrAsTztgEWFyz1qYmc2sNJ6eg-ygC-7TptqyFpLNyJ5k46kU_BibQcZ6UOCpvS1-y1K0IGsHd9eOvhY0BiNnf-AzLB1QaFvd_mcHBHztiTyA3uYf2nM4QP8u86f5fT8jq6mJeRkiq2ZiewX0uzsaJ22fhUBOPjyu9Ety3ypWr4LhtTnjNhlNOEMDLlKRihfOuKiNCn6dKj-X2NGiudzpC8tJjX4&quot;); transform: translateX(0%); transition: transform 1s ease-in-out;"></div>
+<div class="hero-slide bg-cover bg-center absolute inset-0 w-full h-full transition-transform duration-1000 ease-in-out" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAGdUWiGjxiTdh0hP-b7_BrgLhMQH00WILlkBRDcm_NBuUHvBDUagY3uO2wzQZzkfp1MD1AN1TPfugCGsigkvMYuoBtCd9mWmaCAo7uyL0_6VKudI0gOXjU3ZLOH1W6momLGtV_adVjaqL4R5vNJdx-C9IBwWQOLm73kFwbagpddEeU_0K1NWKGUUOSkMgJgpF00cLDgQ79_V76Cj47qc0thOwB-va5qK2Iiwy5nyeqKmCNefgWdJI&quot;); transform: translateX(-100%); transition: transform 1s ease-in-out;"></div>
+<div class="absolute inset-0 bg-background/60 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-margin-mobile md:px-margin-desktop reveal active">
+<h1 class="font-display-lg text-display-lg text-secondary mb-6 drop-shadow-lg">
+                    عصاره‌ی اصالت در هر ذره
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+                    مجموعه‌ای بی‌نظیر از ناب‌ترین ادویه‌جات جهان، دست‌چین شده برای خلق شاهکارهای آشپزی. تجربه‌ای از عطر و طعم‌های سلطنتی در آشپزخانه شما.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+<button class="bg-[#D35400] text-white px-8 py-4 font-label-sm text-label-sm hover:shadow-[inset_0_0_0_1px_#C5A059] transition-all duration-300 uppercase tracking-widest w-full sm:w-auto">
+                        خرید محصولات
+                    </button>
+<button class="bg-transparent border border-secondary text-secondary px-8 py-4 font-label-sm text-label-sm hover:bg-secondary/10 transition-all duration-300 uppercase tracking-widest w-full sm:w-auto">
+                        کشف طعم‌ها
+                    </button>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-24 bg-surface-container-lowest border-t border-secondary/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+<!-- Item 1: Aroma-locking packaging -->
+<div class="flex flex-col items-center text-center p-6 reveal active">
+<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20 spice-glow text-secondary">
+<svg class="w-8 h-8" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-secondary mb-3">بسته‌بندی حافظ عطر</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">حفظ تازگی و عطر اصیل ادویه در ظروف شیشه‌ای تیره</p>
+</div>
+<!-- Item 2: Authenticity guarantee -->
+<div class="flex flex-col items-center text-center p-6 reveal active" style="transition-delay: 100ms;">
+<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20 spice-glow text-secondary">
+<svg class="w-8 h-8" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-secondary mb-3">تضمین اصالت</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">اطمینان از خلوص ۱۰۰٪ و اصالت مبدأ تمامی محصولات</p>
+</div>
+<!-- Item 3: Lab-tested quality -->
+<div class="flex flex-col items-center text-center p-6 reveal active" style="transition-delay: 200ms;">
+<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20 spice-glow text-secondary">
+<svg class="w-8 h-8" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M10 2v7.31"></path><path d="M14 9.3V1.99"></path><path d="M8.5 2h7"></path><path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path><path d="M5.52 16h12.96"></path></svg>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-secondary mb-3">کیفیت آزمایشگاهی</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">بررسی دقیق شاخص‌های کیفی در مجهزترین آزمایشگاه‌ها</p>
+</div>
+<!-- Item 4: Nationwide shipping -->
+<div class="flex flex-col items-center text-center p-6 reveal active" style="transition-delay: 300ms;">
+<div class="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20 spice-glow text-secondary">
+<svg class="w-8 h-8" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="17" cy="18" r="2"></circle><circle cx="7" cy="18" r="2"></circle></svg>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-secondary mb-3">ارسال پستی سراسری</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">تحویل سریع و ایمن سفارشات به تمام نقاط کشور</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Carousel Section -->
+<section class="py-24 overflow-hidden relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12 flex justify-between items-end reveal active">
+<div class="text-right">
+<h2 class="font-headline-xl text-headline-xl text-secondary mb-4">کلکسیون طعم‌ها</h2>
+<div class="w-24 h-px bg-secondary/50"></div>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:text-secondary transition-colors border-b border-primary/30 hover:border-secondary pb-1 z-10" href="#">
+                    مشاهده همه محصولات
+                </a>
+</div>
+<div class="w-full overflow-hidden" id="carousel-container">
+<div class="flex w-[max-content] gap-8 py-8 px-4" id="carousel-track" style="transition: transform 8s ease-in-out; transform: translate3d(0px, 0px, 0px);">
+<!-- Carousel Items -->
+<div class="w-[280px] flex-shrink-0 bg-[#1A1A1A] p-6 group spice-glow border border-transparent hover:border-secondary/20 transition-all duration-500 rounded-DEFAULT cursor-pointer reveal-right active">
+<div class="h-48 w-full mb-6 relative overflow-hidden rounded-DEFAULT">
+<img class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" data-alt="Top-down view of vibrant red smoked paprika powder in a dark, artisan ceramic bowl, placed on a black textural background. Dramatic lighting highlighting the texture of the powder. Dark luxury style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1gsDaY9tE8G4ST92TZMdM6AgKZUKQoyMTyvXASvJ88X8A6oWtDaw-_2GAZhXi0YKLIF3YndOEjgOV8JJRi66PGS5CvJvpEKAkmbPU5FQU-6KCJ17-cbBD_PnXYXWUf-FgjGWfkzG7oiFYGRJPTBOee51j6Mr7FaoLOOF7atuOnBzpJxLakSGZAwXR1ddrG4er4TWKL8328WAOCuNR4aEHO5mQkE2HperqofyFzYD0NzaAqEY95Qw">
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">پاپریکای دودی</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">پایه / گرم و عمیق</p>
+<div class="flex justify-between items-center mt-6 pt-4 border-t border-secondary/10">
+<span class="font-body-lg text-body-lg text-secondary">۲۴۰,۰۰۰ تومان</span>
+<svg class="w-6 h-6 text-primary-container group-hover:scale-125 transition-transform" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+</div>
+</div>
+<div class="w-[280px] flex-shrink-0 bg-[#1A1A1A] p-6 group spice-glow border border-transparent hover:border-secondary/20 transition-all duration-500 rounded-DEFAULT cursor-pointer reveal-right active">
+<div class="h-48 w-full mb-6 relative overflow-hidden rounded-DEFAULT">
+<img class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" data-alt="Macro shot of mixed garam masala spices, whole and ground, scattered elegantly on a dark slate tray. The lighting is moody with warm copper highlights on the spices." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWt-LRoF6FQWeDLkIxtVWuvdhv6Old2591yKaa6bjKj2MQrkp1kkTPpWzhsTiIZ6rqqKWTthvpy3PdEF8PnV_9J-BBdql_6dZMeC1fagFp3Rf-IasSJmrZJRcqNimSRZlO7INtibZ4dCgOed6svAl87dJHcVr0ibNaO3Ji7cK2gVtLvyxwEYi73ME-PhLCWPPJAyo-iqPR4rlW_fXCMatcHdwTT2gxkNWSxdajJDcCi5Hg5saedXo">
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">گرام ماسالا اصیل</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">ترکیبی / تند و معطر</p>
+<div class="flex justify-between items-center mt-6 pt-4 border-t border-secondary/10">
+<span class="font-body-lg text-body-lg text-secondary">۳۸۰,۰۰۰ تومان</span>
+<svg class="w-6 h-6 text-primary-container group-hover:scale-125 transition-transform" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+</div>
+</div>
+<div class="w-[280px] flex-shrink-0 bg-[#1A1A1A] p-6 group spice-glow border border-[#C5A059]/30 hover:border-secondary/60 transition-all duration-500 rounded-DEFAULT cursor-pointer reveal-right relative active">
+<div class="absolute top-0 right-0 bg-secondary text-on-secondary px-3 py-1 font-label-sm text-label-sm rounded-bl-lg z-10">ویژه</div>
+<div class="h-48 w-full mb-6 relative overflow-hidden rounded-DEFAULT">
+<img class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" data-alt="Elegant gift box filled with small glass jars of premium spices, presented on a dark background. The box has gold foil accents. Luxury packaging design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUg2JDrdXydhd5gwYP0ioBBQjuvjPKEsS7_tJyfPH8IF5q9a77TnA_sM7kRwoHlr7pFRORlj4t09var_ggKQtCnqdnoAMyU8mgpvWjj3ENCHVVA9cL7gJaJLTXoHNGvChqSbCa3Ij4m4Y_Ba6AqnhbsNbeuMtwVqQeOniBzQPdYd0XpDj8BuKlSBL1xlK5lNmcBwsF_gKD22Ep7zwJ5qsL1HRkKfxYu-8X-CQGR-TWvz0ZUA5NCOk">
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">پک هدیه شاهانه</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">هدیه / کلکسیون کامل</p>
+<div class="flex justify-between items-center mt-6 pt-4 border-t border-secondary/10">
+<span class="font-body-lg text-body-lg text-secondary">۱,۲۰۰,۰۰۰ تومان</span>
+<svg class="w-6 h-6 text-primary-container group-hover:scale-125 transition-transform" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m5 11 4-7"></path><path d="m19 11-4-7"></path><path d="M2 11h20"></path><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4"></path><path d="M4.5 15.5h15"></path><path d="m9 11 1 9"></path><path d="M15 11l-1 9"></path></svg>
+</div>
+</div>
+<div class="w-[280px] flex-shrink-0 bg-[#1A1A1A] p-6 group spice-glow border border-transparent hover:border-secondary/20 transition-all duration-500 rounded-DEFAULT cursor-pointer reveal-right active">
+<div class="h-48 w-full mb-6 relative overflow-hidden rounded-DEFAULT">
+<img class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" data-alt="Close up of whole black peppercorns and pink peppercorns mixed in a dark wooden bowl. Sharp focus on texture, dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAegU54kAnzMQmJTnS3za4RQifsImQCCMf94jG5XkrEVX20vfZ7xQAU_h6DGRQ4Z9_LvfCxrIKtxAhG0kSuBorngR0i95t14eV92KjPA0eA-0XGbY-UdOhmnHo0etxOIDqpbjkDPmksvLMz8hkk7UxogrL6R-DYVEknqO3kKuIbw25JLIonsvjItOSLDouDZAflD4tqL_Zwem7g2mmzo3qnhu8pZAomP5hdyJu5Iophyq5HAb_BMK0">
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">فلفل سیاه شکسته</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">پایه / تند و تیز</p>
+<div class="flex justify-between items-center mt-6 pt-4 border-t border-secondary/10">
+<span class="font-body-lg text-body-lg text-secondary">۱۹۰,۰۰۰ تومان</span>
+<svg class="w-6 h-6 text-primary-container group-hover:scale-125 transition-transform" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+</div>
+</div>
+<div class="w-[280px] flex-shrink-0 bg-[#1A1A1A] p-6 group spice-glow border border-transparent hover:border-secondary/20 transition-all duration-500 rounded-DEFAULT cursor-pointer reveal-right active">
+<div class="h-48 w-full mb-6 relative overflow-hidden rounded-DEFAULT">
+<img class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" data-alt="Macro shot of vibrant yellow turmeric powder in a ceramic bowl. Sharp detail on the powder texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1gsDaY9tE8G4ST92TZMdM6AgKZUKQoyMTyvXASvJ88X8A6oWtDaw-_2GAZhXi0YKLIF3YndOEjgOV8JJRi66PGS5CvJvpEKAkmbPU5FQU-6KCJ17-cbBD_PnXYXWUf-FgjGWfkzG7oiFYGRJPTBOee51j6Mr7FaoLOOF7atuOnBzpJxLakSGZAwXR1ddrG4er4TWKL8328WAOCuNR4aEHO5mQkE2HperqofyFzYD0NzaAqEY95Qw">
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">زردچوبه ممتاز</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-4">پایه / خالص و معطر</p>
+<div class="flex justify-between items-center mt-6 pt-4 border-t border-secondary/10">
+<span class="font-body-lg text-body-lg text-secondary">۱۲۰,۰۰۰ تومان</span>
+<svg class="w-6 h-6 text-primary-container group-hover:scale-125 transition-transform" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-16 px-margin-desktop flex flex-col items-center bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-secondary/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter w-full max-w-container-max mx-auto text-right rtl">
+<div class="flex flex-col gap-4">
+<span class="font-headline-lg text-headline-lg text-secondary">شاه طعم</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                    ارائه دهنده ناب‌ترین و با کیفیت‌ترین ادویه‌جات از سراسر جهان، با بسته‌بندی‌های لوکس و تضمین اصالت کالا.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-headline-lg text-headline-lg text-secondary mb-2">دسترسی سریع</span>
+<nav class="flex flex-col gap-3">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-all" href="shop.html">فروشگاه ادویه</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-all" href="#">درباره ما</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-all" href="#">تماس با ما</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-headline-lg text-headline-lg text-secondary mb-2">پشتیبانی</span>
+<nav class="flex flex-col gap-3">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-all" href="#">قوانین و مقررات</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-all" href="#">سوالات متداول</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary-container transition-all" href="#">پیگیری سفارش</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4 items-start">
+<span class="font-headline-lg text-headline-lg text-secondary mb-2">نمادها و شبکه‌های اجتماعی</span>
+<div class="flex gap-4 mb-4">
+<a aria-label="Instagram" class="text-on-surface-variant hover:text-primary-container transition-all" href="https://www.instagram.com/shahtam.sp?igsi=MTgyMGQ0MXN2cXV6dA==">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+</a>
+<a aria-label="Telegram" class="text-on-surface-variant hover:text-primary-container transition-all" href="https://t.me/shahtam1">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.94z"></path></svg>
+</a>
+<a aria-label="Bale" class="text-on-surface-variant hover:text-primary-container transition-all" href="https://web.bale.ai/chat?uid=6359322944"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGDjw4KY8TaUpEA3cNPChc3olrdRGOduesK8LVjj9iN07FLkwXSpiJGhRmnSIK6iBl7gXEK533PfpWqntL1jbjUgNadFme02vECW_uO0OnUt6DieV14mHVOSyhlDzf_B2_hn5l8BAS3ndMtDkHWbJyJhf1lpgYTkvTwMXw-wlc_gEtruJ5i0Xq3K_az2S4y90z25_RN0ZD3zzxPJtLIt38Ab-mR_b2NSnuKO2utyMPLAAN20mObWdm-W7u_AttTZLU" alt="Bale" class="w-6 h-6 object-contain"></a></div>
+<div class="bg-surface-container w-24 h-24 rounded-DEFAULT border border-secondary/20 flex items-center justify-center p-2 cursor-pointer hover:border-secondary transition-colors">
+<img class="object-contain w-full h-full opacity-70 hover:opacity-100 transition-opacity" data-alt="E-namad logo, the Iranian e-commerce trust seal, displayed in a dark theme variant on a dark grey background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYcZVCo7KkKhG491LyBoXF3JMyT-pNJLnZySmOe1OCHqp2zyri3HUBFXNCKtSLZYAwgM3N244STNMtFEjzJvigEDV69bVDc8nOwP1tS8OIb3HkwMRY-O-yD5VIcoV3M-yYprYds3PygAfnUB4pRIiAoAGuGUmWoh3KaxgivQxtmPzbRSwoH6Vd7c-qYLKm_O6E_dp2eMFF-_revOMpjtlcFzeNHoU4I3b2E0R5y7lhDab7VHOi9V4sS5ORdHKc1xwQ">
+</div>
+</div>
+</div>
+<div class="w-full max-w-container-max mx-auto mt-16 pt-8 border-t border-secondary/10 flex justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">© ۱۴۰۲ شاه طعم. تمامی حقوق محفوظ است.</span>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el) => {
+                observer.observe(el);
+            });
+
+            // Hero Slider
+            const slides = document.querySelectorAll('.hero-slide');
+            if (slides.length > 0) {
+                let currentSlide = 0;
+                setInterval(() => {
+                    slides[currentSlide].style.transform = 'translateX(-100%)';
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].style.transition = 'none';
+                    slides[currentSlide].style.transform = 'translateX(100%)';
+                    
+                    // Force reflow
+                    void slides[currentSlide].offsetWidth;
+                    
+                    setTimeout(() => {
+                        slides[currentSlide].style.transition = 'transform 1s ease-in-out';
+                        slides[currentSlide].style.transform = 'translateX(0%)';
+                    }, 50);
+                }, 5000);
+            }
+
+            // Carousel Yoyo Logic
+            const track = document.getElementById('carousel-track');
+            const container = document.getElementById('carousel-container');
+            if (track && container) {
+                const moveCarousel = (direction) => {
+                    const maxTranslate = Math.max(0, track.scrollWidth - container.clientWidth);
+                    
+                    if (maxTranslate > 0) {
+                        const targetX = direction === 'end' ? maxTranslate : 0;
+                        
+                        track.style.transition = 'transform 8s ease-in-out';
+                        track.style.transform = `translate3d(${targetX}px, 0, 0)`;
+
+                        setTimeout(() => {
+                            moveCarousel(direction === 'end' ? 'start' : 'end');
+                        }, 8000 + 2000);
+                    } else {
+                        setTimeout(() => moveCarousel(direction), 2000);
+                    }
+                };
+
+                setTimeout(() => moveCarousel('end'), 1000);
+            }
+        });
+    </script>
+<div class="fixed inset-0 z-[55] bg-background/60 backdrop-blur-md transition-opacity duration-300 opacity-0 pointer-events-none" id="mobile-menu-backdrop"></div>
+<div class="fixed top-0 right-0 bottom-0 w-[75vw] max-w-[300px] z-[60] bg-[#1a1a1a]/90 backdrop-blur-xl border-l border-secondary/20 shadow-2xl transition-transform duration-500 flex flex-col items-start justify-start pt-24 px-8 translate-x-full" id="mobile-menu-drawer">
+<button class="absolute top-8 right-8 text-secondary hover:text-primary transition-colors" id="mobile-menu-close"><svg class="w-8 h-8" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+<nav class="flex flex-col gap-8 text-right w-full">
+<a class="font-headline-lg text-headline-lg text-secondary" href="index.html">خانه</a>
+<a class="font-headline-lg text-headline-lg text-on-surface-variant hover:text-primary transition-all" href="shop.html">فروشگاه ادویه</a>
+<a class="font-headline-lg text-headline-lg text-on-surface-variant hover:text-primary transition-all" href="#">درباره ما</a>
+<a class="font-headline-lg text-headline-lg text-on-surface-variant hover:text-primary transition-all" href="#">تماس</a>
+</nav>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => { 
+    const toggle = document.getElementById('mobile-menu-toggle'); 
+    const close = document.getElementById('mobile-menu-close'); 
+    const backdrop = document.getElementById('mobile-menu-backdrop');
+    const drawer = document.getElementById('mobile-menu-drawer');
+    const links = drawer.querySelectorAll('nav a'); 
+
+    const toggleMenu = (show) => { 
+        if (show) { 
+            backdrop.classList.remove('opacity-0', 'pointer-events-none'); 
+            backdrop.classList.add('opacity-100', 'pointer-events-auto'); 
+            drawer.classList.remove('translate-x-full');
+            drawer.classList.add('translate-x-0');
+            document.body.style.overflow = 'hidden'; 
+        } else { 
+            backdrop.classList.add('opacity-0', 'pointer-events-none'); 
+            backdrop.classList.remove('opacity-100', 'pointer-events-auto'); 
+            drawer.classList.add('translate-x-full');
+            drawer.classList.remove('translate-x-0');
+            document.body.style.overflow = ''; 
+        } 
+    }; 
+    toggle?.addEventListener('click', () => toggleMenu(true)); 
+    close?.addEventListener('click', () => toggleMenu(false)); 
+    backdrop?.addEventListener('click', () => toggleMenu(false));
+    links.forEach(link => link.addEventListener('click', () => toggleMenu(false))); 
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html><html class="dark" dir="rtl" lang="fa" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>فروشگاه | شاه طعم</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#474746",
+                      "on-surface-variant": "#e0c0b2",
+                      "inverse-surface": "#e5e2e1",
+                      "on-primary-fixed-variant": "#7c2e00",
+                      "surface-dim": "#131313",
+                      "inverse-on-surface": "#313030",
+                      "on-primary-container": "#4c1a00",
+                      "burnt-copper": "#d35400",
+                      "inverse-primary": "#a23f00",
+                      "tertiary-container": "#929090",
+                      "on-primary": "#571e00",
+                      "secondary": "#e9c176",
+                      "on-error": "#690005",
+                      "error": "#ffb4ab",
+                      "on-tertiary-container": "#2a2a29",
+                      "secondary-fixed": "#ffdea5",
+                      "on-tertiary": "#313030",
+                      "surface-bright": "#3a3939",
+                      "tertiary-fixed": "#e5e2e1",
+                      "surface-container-lowest": "#0e0e0e",
+                      "primary-fixed-dim": "#ffb595",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "surface-container": "#201f1f",
+                      "surface-container-highest": "#353534",
+                      "on-secondary-container": "#dab36a",
+                      "outline-variant": "#594238",
+                      "surface": "#131313",
+                      "aged-gold": "#c5a059",
+                      "tertiary": "#c8c6c5",
+                      "on-primary-fixed": "#351000",
+                      "secondary-container": "#604403",
+                      "on-secondary-fixed": "#261900",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "outline": "#a88a7e",
+                      "error-container": "#93000a",
+                      "primary-container": "#ee671c",
+                      "on-surface": "#e5e2e1",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "surface-container-low": "#1c1b1b",
+                      "background": "#131313",
+                      "on-error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#e9c176",
+                      "on-background": "#e5e2e1",
+                      "primary-fixed": "#ffdbcd",
+                      "surface-variant": "#353534",
+                      "on-secondary": "#412d00",
+                      "surface-tint": "#ffb595",
+                      "primary": "#ffb595"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "base-unit": "8px",
+                      "margin-mobile": "16px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Vazirmatn"
+                      ],
+                      "body-md": [
+                              "Vazirmatn"
+                      ],
+                      "headline-xl": [
+                              "Vazirmatn"
+                      ],
+                      "display-lg-mobile": [
+                              "Vazirmatn"
+                      ],
+                      "body-lg": [
+                              "Vazirmatn"
+                      ],
+                      "headline-lg": [
+                              "Vazirmatn"
+                      ],
+                      "label-sm": [
+                              "Vazirmatn"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "64px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "32px",
+                              {
+                                      "lineHeight": "44px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "48px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353534;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #594238;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<!-- Main Content -->
+<main class="flex-grow flex flex-col">
+<!-- Hero / Breadcrumb -->
+<section class="py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="flex flex-col items-start gap-4 border-b border-surface-container-high pb-8">
+<nav class="text-label-sm text-on-surface-variant flex items-center gap-2"><a class="hover:text-secondary transition-colors" href="index.html">خانه</a>
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+<a class="text-secondary hover:text-secondary transition-colors" href="shop.html">فروشگاه</a>
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+<a class="hover:text-secondary transition-colors flex items-center gap-1" href="cart.html">
+    <span class="">سبد خرید</span>
+    <span class="bg-burnt-copper text-on-primary text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">۲</span>
+</a></nav>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">کلکسیون طعم ها</h1>
+<p class="text-body-md text-on-surface-variant max-w-2xl">کشف اصالت و کیفیت در مجموعه‌ای بی‌نظیر از ادویه‌های خالص و ترکیبات اختصاصی شاه طعم.</p>
+</div>
+</section>
+<!-- Shop Layout -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full pb-24 grid grid-cols-1 lg:grid-cols-4 gap-gutter">
+<!-- Sidebar Filters -->
+<aside class="col-span-1 flex flex-col gap-8">
+<!-- Search -->
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-b border-surface-variant text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-secondary transition-colors py-3 pr-4 pl-10 font-label-sm rounded-none" placeholder="جستجو در محصولات..." type="text">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+</div>
+<!-- Categories -->
+<div>
+<h3 class="font-headline-lg text-headline-lg text-secondary mb-4 pb-2 border-b border-surface-container-high">دسته‌بندی‌ها</h3>
+<ul class="flex flex-col gap-3 font-label-sm text-label-sm">
+<li class="">
+<a class="flex items-center justify-between group" href="#">
+<span class="text-on-surface group-hover:text-secondary transition-colors">همه محصولات</span>
+<span class="text-on-surface-variant text-xs">۱۲۰</span>
+</a>
+</li>
+<li class="">
+<a class="flex items-center justify-between group" href="#">
+<span class="text-on-surface-variant group-hover:text-secondary transition-colors">ادویه‌های پایه</span>
+<span class="text-on-surface-variant text-xs">۴۵</span>
+</a>
+</li>
+<li class="">
+<a class="flex items-center justify-between group" href="#">
+<span class="text-on-surface-variant group-hover:text-secondary transition-colors">ترکیبات خاص</span>
+<span class="text-on-surface-variant text-xs">۶۰</span>
+</a>
+</li>
+<li class="">
+<a class="flex items-center justify-between group" href="#">
+<span class="text-on-surface-variant group-hover:text-secondary transition-colors">پک‌های هدیه</span>
+<span class="text-on-surface-variant text-xs">۱۵</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Price Filter -->
+<div>
+<h3 class="font-headline-lg text-headline-lg text-secondary mb-4 pb-2 border-b border-surface-container-high">محدوده قیمت</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between text-label-sm text-on-surface-variant">
+<span class="">۵۰,۰۰۰ تومان</span>
+<span class="">۲,۵۰۰,۰۰۰ تومان</span>
+</div>
+<input class="w-full accent-burnt-copper h-1 bg-surface-container-high rounded-full appearance-none cursor-pointer" max="2500000" min="50000" type="range">
+</div>
+</div>
+<!-- Sort Options -->
+<div>
+<h3 class="font-headline-lg text-headline-lg text-secondary mb-4 pb-2 border-b border-surface-container-high">مرتب‌سازی</h3>
+<div class="flex flex-col gap-3 font-label-sm text-label-sm">
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio">
+<span class="text-on-surface">جدیدترین‌ها</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio">
+<span class="text-on-surface-variant">ارزان‌ترین</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio">
+<span class="text-on-surface-variant">گران‌ترین</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio">
+<span class="text-on-surface-variant">محبوب‌ترین</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="col-span-1 lg:col-span-3">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-500 flex flex-col relative overflow-hidden">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="High contrast macro photography of bright yellow turmeric powder in a dark, rustic copper bowl resting on a textured black slate surface. Warm, dramatic lighting emphasizing the rich texture and vibrant color of the spice against a dark moody background. Luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEkNMrRyUoyCuS6nh_tW1gkm1qCEyrizmN8LvGRbsqEy3H9r134UfprjC43hyR7q0JWLV_xb582lfu00TzQNS9EHJGsBXP6lKKkYOYeBGzhOd9W8dFcwJIcBLeH2I4tqDq-kJ5R4B5p8pShw0EBVCyJq-AzatuISW3ovkwW35ZGHM4yG-wuTwaitvGQjn0cGMu7cFFte4JIuRqggwD2-se0IF7pWwhtBwq7vHt_R4XMZm9k0uMpqs">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-label-sm py-2 px-6 hover:bg-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                                افزودن
+                            </button>
+<span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-label-sm">ادویه‌های پایه</span>
+</div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<h3 class="font-body-lg text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">زردچوبه ممتاز قلم</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-lg text-headline-lg text-aged-gold">۱۲۰,۰۰۰ <span class="text-sm">تومان</span></span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-500 flex flex-col relative overflow-hidden">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Close up food photography of coarse broken black pepper corns scattered around a small, elegant dark glass jar on a charred wood surface. Low key lighting with subtle copper reflections. Moody, premium culinary noir style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyPmCcnZ6edAbFCbmuzWpnyy9jV2qzIfyx6sFlYzLmja7l1XkWWpRrHJ0ERiW7PZRUgFtGVpbuYaOJj5Ng1Umv3SKFHqCfpx1JNCpYl-5HjR4g9zyP_Pun1cEoz-N3G2opbZgKvE_uMc1zvybC7Le7wtz1UB7Hl4s9ra-pAoXh1i-CzbZIP_J_0z7HVAzfVoPHSXHTcxan6146D_W4nKbxG9ZN-Zrb0VhN-fXJEpBLA9wv0p0Yoq8">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-label-sm py-2 px-6 hover:bg-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                                افزودن
+                            </button>
+<span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-label-sm">ادویه‌های پایه</span>
+</div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<h3 class="font-body-lg text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">فلفل سیاه دانه‌درشت</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-lg text-headline-lg text-aged-gold">۱۸۵,۰۰۰ <span class="text-sm">تومان</span></span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-500 flex flex-col relative overflow-hidden">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Artistic shot of Garam Masala spice blend, showing layers of different ground spices in a small, sleek ceramic dish. The dish sits on dark, textured linen. Soft, directional light highlights the rich reds, browns, and golds of the spices. High-end culinary photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXyrUsvyXkPqghXaN2H1l-IbzjxyMFP62RaYlTTuCzdwT4Ld4a4S4GQ7SRDMdMaKuOSGrgLIL7He3dUySokGnVR7qJJClOfv13epGaeU3AzbsX47XeyJzpUc7R5kYIwK4DoWNZFf6-DW7RcaEpqzMd9pcxq-QRdHlnI1ihUVBgvXfuHkz1zZj9_o34j607dRr_h8YMNcyB1s5iCZPYJLsnoV4jd6VLv7vrZFwjq51WOnvO1H52ZgY">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-label-sm py-2 px-6 hover:bg-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                                افزودن
+                            </button>
+<span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-label-sm">ترکیبات خاص</span>
+</div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<h3 class="font-body-lg text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">گرام ماسالا اصیل</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-lg text-headline-lg text-aged-gold">۲۴۰,۰۰۰ <span class="text-sm">تومان</span></span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-500 flex flex-col relative overflow-hidden">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Vibrant red smoked paprika powder mounded on a dark, rustic wooden spoon, with a wisp of smoke curling upwards in the background. The scene is lit with warm, moody lighting against a pitch-black backdrop, emphasizing the rich, smoky flavor profile. Premium dark aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeWHIDxJFuRW9n_e-CbjI3ltW-PD7kKbrZ30KVQ_y09xRPoWAEa2AZrrzMJ4m5QeSR6sCFIDBdf568ZMpp1GFVAhOtiIRAyXoVOMYaiafaqG6NhLwX3E1Bv_3uxyrC55a5GQZDgI3_DZJK334d0MJQldzTimq7nhDBrfdPFRIJi6WXPiJ3OM7my-ezQbNoEVnEQNboMWL9Wj3QZRSKLlr4a7lr7smgKMxNmeBQyasSlXYHsp10ksc">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-label-sm py-2 px-6 hover:bg-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                                افزودن
+                            </button>
+<span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-label-sm">ادویه‌های پایه</span>
+</div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<h3 class="font-body-lg text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">پاپریکا دودی</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-lg text-headline-lg text-aged-gold">۱۶۰,۰۰۰ <span class="text-sm">تومان</span></span>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-500 flex flex-col relative overflow-hidden">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="A delicate glass vial filled with a golden spice mix, featuring visible red saffron threads and dried rose petals, resting on a dark marble surface. Gentle, elegant lighting highlights the premium nature of the ingredients. Luxurious and moody composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ36UQ_sV3k7-PDg3ZE8StYt_FVmeH5lZb8kC6L2vRpn-YRAZ5wNkmuFoQ1itJ1rCfaZIQyBeR_D-X4Bq-3HRxJ44jdIaA-ivbz4g-nxoK7IdAf_gf7f26Sq-91c-o9koQih7CF-QXLuZugTp4DA8hRayhWdfxEDMMHJ03BDGH_MWJ8QIBUANfBZlTsB9DWCYBmz0S1n3QGaYieBK_fkavu31fWyNxgL0ZOAX9LpkbQw334bQVgSE">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-label-sm py-2 px-6 hover:bg-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                                افزودن
+                            </button>
+<span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-label-sm">ترکیبات خاص</span>
+</div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<h3 class="font-body-lg text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">چاشنی عطر زعفران</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-lg text-headline-lg text-aged-gold">۳۵۰,۰۰۰ <span class="text-sm">تومان</span></span>
+</div>
+</div>
+</div>
+<!-- Product Card 6 - Gift Pack (Special Styling) -->
+<div class="group bg-surface-container-low border border-aged-gold/40 hover:border-aged-gold transition-all duration-500 flex flex-col relative overflow-hidden">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="An exquisite, dark wooden gift box, partially open, revealing small, elegant glass jars filled with various vibrant spices. The box has subtle gold accents. Photographed against a dark, moody background with dramatic, luxurious lighting emphasizing the premium gifting experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgGsWSPzoZ9sk61At0huIG_9C2r7x7N9tSz2C0w3hqDnJVHMsBK1UWDB0BQ2NLENDMOBKSA8w0g8nq7-E5lQFDUQaKmxAug9YHihiEaK27AwdUn2NSdNRuvmaqtiBQDdvJnzaNAeua-PuShYtWrQSGk1LeUD1ZTQXqM1I5AtWS2mV7wAPJmDLLnOQioHKuJLIze5G7WlLFxe1E42SQJ-3PzoZr8mA9MRayb4P4fG2b_ZdO5e61gBI">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-label-sm py-2 px-6 hover:bg-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                                افزودن
+                            </button>
+<span class="absolute top-3 right-3 bg-aged-gold text-on-secondary-container text-xs py-1 px-2 font-label-sm shadow-lg shadow-aged-gold/20">پک‌های هدیه</span>
+</div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute inset-0 bg-aged-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<h3 class="font-body-lg text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">پک هدیه امپریال</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-lg text-headline-lg text-aged-gold">۱,۲۰۰,۰۰۰ <span class="text-sm">تومان</span></span>
+</div>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-500 flex flex-col relative overflow-hidden">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Premium cinnamon sticks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyPmCcnZ6edAbFCbmuzWpnyy9jV2qzIfyx6sFlYzLmja7l1XkWWpRrHJ0ERiW7PZRUgFtGVpbuYaOJj5Ng1Umv3SKFHqCfpx1JNCpYl-5HjR4g9zyP_Pun1cEoz-N3G2opbZgKvE_uMc1zvybC7Le7wtz1UB7Hl4s9ra-pAoXh1i-CzbZIP_J_0z7HVAzfVoPHSXHTcxan6146D_W4nKbxG9ZN-Zrb0VhN-fXJEpBLA9wv0p0Yoq8">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-label-sm py-2 px-6 hover:bg-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                                افزودن
+                            </button>
+<span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-label-sm">ادویه‌های پایه</span>
+</div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<h3 class="font-body-lg text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">چوب دارچین سیلان</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-lg text-headline-lg text-aged-gold">۹۵,۰۰۰ <span class="text-sm">تومان</span></span>
+</div>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-500 flex flex-col relative overflow-hidden">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Green cardamom pods" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXyrUsvyXkPqghXaN2H1l-IbzjxyMFP62RaYlTTuCzdwT4Ld4a4S4GQ7SRDMdMaKuOSGrgLIL7He3dUySokGnVR7qJJClOfv13epGaeU3AzbsX47XeyJzpUc7R5kYIwK4DoWNZFf6-DW7RcaEpqzMd9pcxq-QRdHlnI1ihUVBgvXfuHkz1zZj9_o34j607dRr_h8YMNcyB1s5iCZPYJLsnoV4jd6VLv7vrZFwjq51WOnvO1H52ZgY">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-label-sm py-2 px-6 hover:bg-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                                افزودن
+                            </button>
+<span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-label-sm">ادویه‌های پایه</span>
+</div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<h3 class="font-body-lg text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">هل سبز اعلا</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-lg text-headline-lg text-aged-gold">۴۲۰,۰۰۰ <span class="text-sm">تومان</span></span>
+</div>
+</div>
+</div>
+<!-- Product Card 9 -->
+<div class="group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-500 flex flex-col relative overflow-hidden">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="Star anise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeWHIDxJFuRW9n_e-CbjI3ltW-PD7kKbrZ30KVQ_y09xRPoWAEa2AZrrzMJ4m5QeSR6sCFIDBdf568ZMpp1GFVAhOtiIRAyXoVOMYaiafaqG6NhLwX3E1Bv_3uxyrC55a5GQZDgI3_DZJK334d0MJQldzTimq7nhDBrfdPFRIJi6WXPiJ3OM7my-ezQbNoEVnEQNboMWL9Wj3QZRSKLlr4a7lr7smgKMxNmeBQyasSlXYHsp10ksc">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<button class="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-label-sm py-2 px-6 hover:bg-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">shopping_cart</span>
+                                افزودن
+                            </button>
+<span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-label-sm">ادویه‌های پایه</span>
+</div>
+<div class="p-6 flex flex-col gap-2 relative">
+<div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<h3 class="font-body-lg text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">بادیان ستاره‌ای</h3>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-lg text-headline-lg text-aged-gold">۱۴۵,۰۰۰ <span class="text-sm">تومان</span></span>
+</div>
+</div>
+</div></div>
+<!-- Pagination -->
+<div class="mt-12 flex items-center justify-center gap-2">
+<button class="w-10 h-10 border border-surface-variant flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+<button class="w-10 h-10 border border-secondary bg-secondary/10 flex items-center justify-center text-secondary font-label-sm">۱</button>
+<button class="w-10 h-10 border border-surface-variant flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-colors font-label-sm">۲</button>
+<button class="w-10 h-10 border border-surface-variant flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-colors font-label-sm">۳</button>
+<button class="w-10 h-10 border border-surface-variant flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-colors"><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+
+
+
+
+</body></html>
