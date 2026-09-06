@@ -17,5 +17,6 @@ collections:
     fields:
       - {label: "نام محصول", name: "title", widget: "string"}
       - {label: "قیمت (تومان)", name: "price", widget: "string"}
+      - {label: "دسته‌بندی", name: "category", widget: "select", options: ["ادویه‌جات", "چاشنی و عصاره", "خشکبار", "سایر"]}
       - {label: "تصویر محصول", name: "image", widget: "image"}
       - {label: "توضیحات", name: "body", widget: "markdown"}
