@@ -19,4 +19,4 @@ collections:
       - {label: "قیمت (تومان)", name: "price", widget: "string"}
       - {label: "دسته‌بندی", name: "category", widget: "select", options: ["ادویه‌ های پایه", "ترکیبات خاص", "پک های هدیه"]}
       - {label: "تصویر محصول", name: "image", widget: "image"}
-      - {label: "توضیحات", name: "body", widget: "markdown"}
+      - {label: "توضیحات محصول", name: "description", widget: "text"}
