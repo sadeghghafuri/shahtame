@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-
-<html class="dark" dir="rtl" lang="fa"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!DOCTYPE html><html class="dark" dir="rtl" lang="fa" style="overflow-x: hidden;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>فروشگاه | شاه طعم</title>
 <!-- Preload Iranian Digits Persian Fonts (Vazirmatn FD) -->
-<link as="font" crossorigin="" href="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/webfonts/Vazirmatn-FD-NL-Regular.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/webfonts/Vazirmatn-FD-NL-Medium.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/webfonts/Vazirmatn-FD-NL-Bold.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/webfonts/Vazirmatn-FD-NL-Regular.woff2" rel="preload" type="font/woff2">
+<link as="font" crossorigin="" href="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/webfonts/Vazirmatn-FD-NL-Medium.woff2" rel="preload" type="font/woff2">
+<link as="font" crossorigin="" href="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/webfonts/Vazirmatn-FD-NL-Bold.woff2" rel="preload" type="font/woff2">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
 tailwind.config = {
@@ -118,23 +116,21 @@ body, button, input, select, textarea {
 }
 </style>
 </head>
-<body class="bg-background text-on-background font-vazir text-body-md min-h-screen flex flex-col relative selection:bg-burnt-copper selection:text-white">
+<body class="bg-background text-on-background font-vazir text-body-md min-h-screen flex flex-col relative selection:bg-burnt-copper selection:text-white" style="overflow: hidden;">
 <!-- Header Navigation -->
 <header class="fixed top-0 right-0 left-0 w-full border-b border-surface-container-high bg-[#131313]/90 backdrop-blur-md z-40">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex items-center justify-between">
-<nav class="text-label-sm text-on-surface-variant flex items-center gap-2.5">
+<!-- Left: Nav Breadcrumb + Cart Trigger Button -->
+<nav class="text-label-sm text-on-surface-variant flex items-center gap-2.5 order-1 md:order-1">
 <a class="hover:text-secondary transition-colors" href="index.html">خانه</a>
-<svg class="w-3.5 h-3.5 text-on-surface-variant shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+<svg class="w-3.5 h-3.5 text-on-surface-variant shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
 <a class="hover:text-secondary transition-colors" href="shop.html">فروشگاه</a>
-<svg class="w-3.5 h-3.5 text-on-surface-variant shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
-<button class="hover:text-secondary transition-all flex items-center gap-2 cursor-pointer bg-surface-container-high/60 hover:bg-surface-container-high border border-surface-variant/40 hover:border-secondary/40 py-1.5 px-3 rounded text-inherit font-inherit relative group" id="cart-nav-btn" type="button">
-<svg class="w-4 h-4 text-secondary group-hover:scale-110 transition-transform shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-<span class="font-medium text-on-surface group-hover:text-secondary transition-colors">سبد خرید</span>
-<span class="bg-burnt-copper text-white text-[12px] font-bold rounded-full min-w-[20px] h-5 px-1.5 items-center justify-center shadow-sm transition-transform duration-200 hidden" id="cart-nav-badge">۰</span>
-</button>
+<svg class="w-3.5 h-3.5 text-on-surface-variant shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+<button aria-label="سبد خرید" class="hover:text-secondary transition-all flex items-center gap-2 cursor-pointer bg-surface-container-high/60 hover:bg-surface-container-high border border-surface-variant/40 hover:border-secondary/40 py-1.5 px-3 rounded text-inherit font-inherit relative group cart-toggle-btn" data-cart-toggle="true" id="cart-nav-btn" onclick="if(window.toggleCart){window.toggleCart(true);}else if(window.openCart){window.openCart();}" type="button"><svg class="w-4 h-4 text-secondary group-hover:scale-110 transition-transform shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg><span class="font-medium text-on-surface group-hover:text-secondary transition-colors pointer-events-none">سبد خرید</span><span class="cart-badge absolute -top-1.5 -right-1.5 bg-[#d35400] text-white text-[11px] font-bold rounded-full w-5 h-5 flex items-center justify-center shadow-md transition-all duration-300 hidden" data-cart-badge="" id="cart-nav-badge" style="display: none;">۰</span></button>
 </nav>
-<a class="inline-flex items-center hover:opacity-90 transition-opacity" href="index.html">
-<img alt="شاه طعم" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6871sUMZ_0RKJEXgmoV36BPficjBNf1feRMCSJm-HrDFG7bA-uumAOZvSws5ZE--YlWQbry2jZJ_y9WbMn6hkkM-OoReDu1JSulYO4rBFu2qc2_WyUn7OXCNh5cfvT_aoeSzMtIhWBRVIX5qd9EU-myPOqCsDMyDuyQXbhrnTw4m0xPGJJYubpFAobl-z4McLdt1a4blZ8OqXkGfKuRaTtopYRsNZEqHabnjqmSzLh5TFjL1I81-cVCuvQ5Y3A348fb2y892UZlfJ"/>
+<!-- Right: Logo -->
+<a class="inline-flex items-center hover:opacity-90 transition-opacity order-2 md:order-2" href="index.html">
+<img alt="شاه طعم" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6871sUMZ_0RKJEXgmoV36BPficjBNf1feRMCSJm-HrDFG7bA-uumAOZvSws5ZE--YlWQbry2jZJ_y9WbMn6hkkM-OoReDu1JSulYO4rBFu2qc2_WyUn7OXCNh5cfvT_aoeSzMtIhWBRVIX5qd9EU-myPOqCsDMyDuyQXbhrnTw4m0xPGJJYubpFAobl-z4McLdt1a4blZ8OqXkGfKuRaTtopYRsNZEqHabnjqmSzLh5TFjL1I81-cVCuvQ5Y3A348fb2y892UZlfJ">
 </a>
 </div>
 </header>
@@ -153,41 +149,41 @@ body, button, input, select, textarea {
 <aside class="col-span-1 flex flex-col gap-8">
 <!-- Search Input -->
 <div class="relative">
-<input class="w-full bg-surface-container-lowest border-b border-surface-variant text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-secondary transition-colors py-3 pr-4 pl-10 text-label-sm rounded-none border-t-0 border-x-0" id="search-input" placeholder="جستجو در محصولات..." type="text"/>
+<input class="w-full bg-surface-container-lowest border-b border-surface-variant text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-secondary transition-colors py-3 pr-4 pl-10 text-label-sm rounded-none border-t-0 border-x-0" id="search-input" placeholder="جستجو در محصولات..." type="text">
 <button class="hidden absolute left-8 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-secondary p-1" id="clear-search-btn" title="پاک کردن جستجو" type="button">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
 </button>
-<svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 </div>
 <!-- Categories -->
 <div>
 <div class="flex items-center justify-between mb-4 pb-2 border-b border-surface-container-high">
 <h3 class="text-headline-lg text-secondary font-semibold">دسته‌بندی‌ها</h3>
 <button class="flex items-center gap-1.5 text-label-sm text-on-surface-variant hover:text-burnt-copper transition-all duration-200 py-1 px-2.5 rounded border border-surface-variant/40 hover:border-burnt-copper/50 bg-surface-container-low/60 hover:bg-surface-container opacity-50 cursor-not-allowed group" disabled="" id="sidebar-reset-filters-btn" title="حذف تمام فیلترها" type="button">
-<svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180 shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-<span>حذف فیلترها</span>
+<svg class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180 shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+<span class="">حذف فیلترها</span>
 </button>
 </div>
 <ul class="flex flex-col gap-3 text-label-sm" id="category-list">
-<li>
+<li class="">
 <a class="flex items-center justify-between group cursor-pointer category-filter active text-secondary font-medium" data-category="all" data-title="همه محصولات">
 <span class="cat-label">همه محصولات</span>
-<span class="text-on-surface-variant text-xs bg-surface-container-high px-2 py-0.5 rounded" id="count-all">۰</span>
+<span class="text-on-surface-variant text-xs bg-surface-container-high px-2 py-0.5 rounded" id="count-all">۱۶</span>
 </a>
 </li>
-<li>
+<li class="">
 <a class="flex items-center justify-between group cursor-pointer category-filter text-on-surface-variant hover:text-secondary transition-colors" data-category="base" data-title="ادویه‌های پایه">
 <span class="cat-label">ادویه‌های پایه</span>
-<span class="text-on-surface-variant text-xs bg-surface-container-high px-2 py-0.5 rounded" id="count-base">۰</span>
+<span class="text-on-surface-variant text-xs bg-surface-container-high px-2 py-0.5 rounded" id="count-base">۹</span>
 </a>
 </li>
-<li>
+<li class="">
 <a class="flex items-center justify-between group cursor-pointer category-filter text-on-surface-variant hover:text-secondary transition-colors" data-category="blends" data-title="ترکیبات خاص">
 <span class="cat-label">ترکیبات خاص</span>
-<span class="text-on-surface-variant text-xs bg-surface-container-high px-2 py-0.5 rounded" id="count-blends">۰</span>
+<span class="text-on-surface-variant text-xs bg-surface-container-high px-2 py-0.5 rounded" id="count-blends">۷</span>
 </a>
 </li>
-<li>
+<li class="">
 <a class="flex items-center justify-between group cursor-pointer category-filter text-on-surface-variant hover:text-secondary transition-colors" data-category="gifts" data-title="پک‌های هدیه">
 <span class="cat-label">پک‌های هدیه</span>
 <span class="text-on-surface-variant text-xs bg-surface-container-high px-2 py-0.5 rounded" id="count-gifts">۰</span>
@@ -200,10 +196,10 @@ body, button, input, select, textarea {
 <h3 class="text-headline-lg text-secondary font-semibold mb-4 pb-2 border-b border-surface-container-high">محدوده قیمت</h3>
 <div class="flex flex-col gap-4">
 <div class="flex items-center justify-between text-label-sm text-on-surface-variant">
-<span>۵۰,۰۰۰ تومان</span>
-<span id="price-val-label">۲,۵۰۰,۰۰۰ تومان</span>
+<span class="">۵۰,۰۰۰ تومان</span>
+<span class="" id="price-val-label">۲,۵۰۰,۰۰۰ تومان</span>
 </div>
-<input class="w-full accent-burnt-copper h-1.5 bg-surface-container-high rounded-full appearance-none cursor-pointer" id="price-range" max="2500000" min="50000" step="50000" type="range" value="2500000"/>
+<input class="w-full accent-burnt-copper h-1.5 bg-surface-container-high rounded-full appearance-none cursor-pointer" id="price-range" max="2500000" min="50000" step="50000" type="range" value="2500000">
 </div>
 </div>
 <!-- Sorting -->
@@ -211,19 +207,19 @@ body, button, input, select, textarea {
 <h3 class="text-headline-lg text-secondary font-semibold mb-4 pb-2 border-b border-surface-container-high">مرتب‌سازی</h3>
 <div class="flex flex-col gap-3 text-label-sm" id="sort-group">
 <label class="flex items-center gap-3 cursor-pointer">
-<input checked="" class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio" value="newest"/>
+<input checked="" class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio" value="newest">
 <span class="text-on-surface">جدیدترین‌ها</span>
 </label>
 <label class="flex items-center gap-3 cursor-pointer">
-<input class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio" value="cheap"/>
+<input class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio" value="cheap">
 <span class="text-on-surface-variant">ارزان‌ترین</span>
 </label>
 <label class="flex items-center gap-3 cursor-pointer">
-<input class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio" value="expensive"/>
+<input class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio" value="expensive">
 <span class="text-on-surface-variant">گران‌ترین</span>
 </label>
 <label class="flex items-center gap-3 cursor-pointer">
-<input class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio" value="popular"/>
+<input class="form-radio text-burnt-copper bg-surface-container-lowest border-surface-variant focus:ring-burnt-copper focus:ring-offset-background" name="sort" type="radio" value="popular">
 <span class="text-on-surface-variant">محبوب‌ترین</span>
 </label>
 </div>
@@ -235,181 +231,254 @@ body, button, input, select, textarea {
 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-surface-container-high text-label-sm text-on-surface-variant">
 <div class="flex items-center flex-wrap gap-3">
 <div class="flex items-center gap-2">
-<svg class="w-4 h-4 text-secondary shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
-<span>دسته‌بندی فعال:</span>
+<svg class="w-4 h-4 text-secondary shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+<span class="">دسته‌بندی فعال:</span>
 <span class="text-secondary font-medium" id="active-category-display">همه محصولات</span>
 </div>
 <button class="hidden items-center gap-1 text-xs text-burnt-copper hover:text-primary transition-colors bg-burnt-copper/10 hover:bg-burnt-copper/20 border border-burnt-copper/30 px-2 py-0.5 rounded cursor-pointer" id="status-reset-filters-btn" title="حذف فیلترها" type="button">
-<svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
-<span>حذف فیلترها</span>
+<svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+<span class="">حذف فیلترها</span>
 </button>
 </div>
 <div class="flex items-center gap-2">
-<span class="text-on-surface" id="products-count-display">در حال بارگذاری...</span>
+<span class="text-on-surface" id="products-count-display">نمایش ۹ از ۱۶ محصول</span>
 </div>
 </div>
-<!-- Products Grid -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="products-grid"></div>
+<!-- Products Grid (Rendered dynamically) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="products-grid"><div id="product-card-1" class="product-card group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-300 flex flex-col relative overflow-hidden rounded">
+      <div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/images/محصول-ادویه-خورشت.jpg" alt="ادویه خورشت" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <button class="add-to-cart-btn absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-medium w-36 h-10 px-3 hover:bg-primary-container flex items-center justify-center gap-1.5 cursor-pointer shadow-lg whitespace-nowrap overflow-hidden rounded" data-id="1">
+          <span class="btn-icon-box shrink-0 flex items-center justify-center pointer-events-none">
+            <svg class="w-4 h-4 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+          </span>
+          <span class="btn-text text-xs leading-none shrink-0 pointer-events-none font-medium">افزودن به سبد</span>
+        </button>
+        <span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-medium rounded">ترکیبات خاص</span>
+      </div>
+      <div class="p-6 flex flex-col gap-2 relative">
+        <div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        <h3 class="text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">ادویه خورشت</h3>
+        <div class="flex items-center justify-between mt-2">
+          <span class="text-headline-lg text-aged-gold font-bold">۳۷۰,۰۰۰ <span class="text-sm font-normal">تومان</span></span>
+        </div>
+      </div>
+    </div><div id="product-card-2" class="product-card group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-300 flex flex-col relative overflow-hidden rounded">
+      <div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/images/محصول-ادویه-فلافل.jpg" alt="ادویه فلافل" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <button class="add-to-cart-btn absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-medium w-36 h-10 px-3 hover:bg-primary-container flex items-center justify-center gap-1.5 cursor-pointer shadow-lg whitespace-nowrap overflow-hidden rounded" data-id="2">
+          <span class="btn-icon-box shrink-0 flex items-center justify-center pointer-events-none">
+            <svg class="w-4 h-4 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+          </span>
+          <span class="btn-text text-xs leading-none shrink-0 pointer-events-none font-medium">افزودن به سبد</span>
+        </button>
+        <span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-medium rounded">ترکیبات خاص</span>
+      </div>
+      <div class="p-6 flex flex-col gap-2 relative">
+        <div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        <h3 class="text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">ادویه فلافل</h3>
+        <div class="flex items-center justify-between mt-2">
+          <span class="text-headline-lg text-aged-gold font-bold">۲۷۰,۰۰۰ <span class="text-sm font-normal">تومان</span></span>
+        </div>
+      </div>
+    </div><div id="product-card-3" class="product-card group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-300 flex flex-col relative overflow-hidden rounded">
+      <div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/images/محصول-ادویه-قرمه-سبزی.jpg" alt="ادویه قرمه سبزی" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <button class="add-to-cart-btn absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-medium w-36 h-10 px-3 hover:bg-primary-container flex items-center justify-center gap-1.5 cursor-pointer shadow-lg whitespace-nowrap overflow-hidden rounded" data-id="3">
+          <span class="btn-icon-box shrink-0 flex items-center justify-center pointer-events-none">
+            <svg class="w-4 h-4 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+          </span>
+          <span class="btn-text text-xs leading-none shrink-0 pointer-events-none font-medium">افزودن به سبد</span>
+        </button>
+        <span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-medium rounded">ترکیبات خاص</span>
+      </div>
+      <div class="p-6 flex flex-col gap-2 relative">
+        <div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        <h3 class="text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">ادویه قرمه سبزی</h3>
+        <div class="flex items-center justify-between mt-2">
+          <span class="text-headline-lg text-aged-gold font-bold">۴۵۰,۰۰۰ <span class="text-sm font-normal">تومان</span></span>
+        </div>
+      </div>
+    </div><div id="product-card-4" class="product-card group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-300 flex flex-col relative overflow-hidden rounded">
+      <div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/images/محصول-ادویه-ماکارونی.jpg" alt="ادویه ماکارونی" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <button class="add-to-cart-btn absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-medium w-36 h-10 px-3 hover:bg-primary-container flex items-center justify-center gap-1.5 cursor-pointer shadow-lg whitespace-nowrap overflow-hidden rounded" data-id="4">
+          <span class="btn-icon-box shrink-0 flex items-center justify-center pointer-events-none">
+            <svg class="w-4 h-4 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+          </span>
+          <span class="btn-text text-xs leading-none shrink-0 pointer-events-none font-medium">افزودن به سبد</span>
+        </button>
+        <span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-medium rounded">ترکیبات خاص</span>
+      </div>
+      <div class="p-6 flex flex-col gap-2 relative">
+        <div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        <h3 class="text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">ادویه ماکارونی</h3>
+        <div class="flex items-center justify-between mt-2">
+          <span class="text-headline-lg text-aged-gold font-bold">۳۳۰,۰۰۰ <span class="text-sm font-normal">تومان</span></span>
+        </div>
+      </div>
+    </div><div id="product-card-5" class="product-card group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-300 flex flex-col relative overflow-hidden rounded">
+      <div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/images/محصول-ادویه-مرغ.jpg" alt="ادویه مرغ" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <button class="add-to-cart-btn absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-medium w-36 h-10 px-3 hover:bg-primary-container flex items-center justify-center gap-1.5 cursor-pointer shadow-lg whitespace-nowrap overflow-hidden rounded" data-id="5">
+          <span class="btn-icon-box shrink-0 flex items-center justify-center pointer-events-none">
+            <svg class="w-4 h-4 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+          </span>
+          <span class="btn-text text-xs leading-none shrink-0 pointer-events-none font-medium">افزودن به سبد</span>
+        </button>
+        <span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-medium rounded">ترکیبات خاص</span>
+      </div>
+      <div class="p-6 flex flex-col gap-2 relative">
+        <div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        <h3 class="text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">ادویه مرغ</h3>
+        <div class="flex items-center justify-between mt-2">
+          <span class="text-headline-lg text-aged-gold font-bold">۵۰۰,۰۰۰ <span class="text-sm font-normal">تومان</span></span>
+        </div>
+      </div>
+    </div><div id="product-card-6" class="product-card group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-300 flex flex-col relative overflow-hidden rounded">
+      <div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/images/پاپریکا-شاه-طعم.jpg" alt="ادویه پابریکا" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <button class="add-to-cart-btn absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-medium w-36 h-10 px-3 hover:bg-primary-container flex items-center justify-center gap-1.5 cursor-pointer shadow-lg whitespace-nowrap overflow-hidden rounded" data-id="6">
+          <span class="btn-icon-box shrink-0 flex items-center justify-center pointer-events-none">
+            <svg class="w-4 h-4 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+          </span>
+          <span class="btn-text text-xs leading-none shrink-0 pointer-events-none font-medium">افزودن به سبد</span>
+        </button>
+        <span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-medium rounded">ادویه‌های پایه</span>
+      </div>
+      <div class="p-6 flex flex-col gap-2 relative">
+        <div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        <h3 class="text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">ادویه پابریکا</h3>
+        <div class="flex items-center justify-between mt-2">
+          <span class="text-headline-lg text-aged-gold font-bold">۲۱۰,۰۰۰ <span class="text-sm font-normal">تومان</span></span>
+        </div>
+      </div>
+    </div><div id="product-card-7" class="product-card group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-300 flex flex-col relative overflow-hidden rounded">
+      <div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/images/زردچوبه-شاه-طعم.jpg" alt="زردچوبه اعلا" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <button class="add-to-cart-btn absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-medium w-36 h-10 px-3 hover:bg-primary-container flex items-center justify-center gap-1.5 cursor-pointer shadow-lg whitespace-nowrap overflow-hidden rounded" data-id="7">
+          <span class="btn-icon-box shrink-0 flex items-center justify-center pointer-events-none">
+            <svg class="w-4 h-4 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+          </span>
+          <span class="btn-text text-xs leading-none shrink-0 pointer-events-none font-medium">افزودن به سبد</span>
+        </button>
+        <span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-medium rounded">ادویه‌های پایه</span>
+      </div>
+      <div class="p-6 flex flex-col gap-2 relative">
+        <div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        <h3 class="text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">زردچوبه اعلا</h3>
+        <div class="flex items-center justify-between mt-2">
+          <span class="text-headline-lg text-aged-gold font-bold">۱۸۰,۰۰۰ <span class="text-sm font-normal">تومان</span></span>
+        </div>
+      </div>
+    </div><div id="product-card-8" class="product-card group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-300 flex flex-col relative overflow-hidden rounded">
+      <div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/images/ادویه-کاری-شاه-طعم.jpg" alt="ادویه کاری" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <button class="add-to-cart-btn absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-medium w-36 h-10 px-3 hover:bg-primary-container flex items-center justify-center gap-1.5 cursor-pointer shadow-lg whitespace-nowrap overflow-hidden rounded" data-id="8">
+          <span class="btn-icon-box shrink-0 flex items-center justify-center pointer-events-none">
+            <svg class="w-4 h-4 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+          </span>
+          <span class="btn-text text-xs leading-none shrink-0 pointer-events-none font-medium">افزودن به سبد</span>
+        </button>
+        <span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-medium rounded">ادویه‌های پایه</span>
+      </div>
+      <div class="p-6 flex flex-col gap-2 relative">
+        <div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        <h3 class="text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">ادویه کاری</h3>
+        <div class="flex items-center justify-between mt-2">
+          <span class="text-headline-lg text-aged-gold font-bold">۲۹۰,۰۰۰ <span class="text-sm font-normal">تومان</span></span>
+        </div>
+      </div>
+    </div><div id="product-card-9" class="product-card group bg-surface-container-low border border-surface-container-high hover:border-aged-gold/30 transition-all duration-300 flex flex-col relative overflow-hidden rounded">
+      <div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://raw.githubusercontent.com/sadeghghafuri/shahtame/main/images/محصول-ادویه-غذای-دریایی.jpg" alt="ادویه غذای دریایی" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <button class="add-to-cart-btn absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-12 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-burnt-copper text-on-primary font-medium w-36 h-10 px-3 hover:bg-primary-container flex items-center justify-center gap-1.5 cursor-pointer shadow-lg whitespace-nowrap overflow-hidden rounded" data-id="9">
+          <span class="btn-icon-box shrink-0 flex items-center justify-center pointer-events-none">
+            <svg class="w-4 h-4 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path></svg>
+          </span>
+          <span class="btn-text text-xs leading-none shrink-0 pointer-events-none font-medium">افزودن به سبد</span>
+        </button>
+        <span class="absolute top-3 right-3 bg-surface-container/80 backdrop-blur-sm border border-outline-variant text-on-surface-variant text-xs py-1 px-2 font-medium rounded">ترکیبات خاص</span>
+      </div>
+      <div class="p-6 flex flex-col gap-2 relative">
+        <div class="absolute inset-0 bg-burnt-copper/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+        <h3 class="text-body-lg text-on-surface group-hover:text-secondary transition-colors line-clamp-1">ادویه غذای دریایی</h3>
+        <div class="flex items-center justify-between mt-2">
+          <span class="text-headline-lg text-aged-gold font-bold">۳۵۰,۰۰۰ <span class="text-sm font-normal">تومان</span></span>
+        </div>
+      </div>
+    </div></div>
 <!-- Empty State -->
 <div class="hidden py-16 px-4 text-center text-on-surface-variant border border-dashed border-surface-variant rounded-lg mt-6 flex-col items-center justify-center gap-3" id="no-products-msg">
-<svg class="w-10 h-10 text-outline" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 8v4m0 4h.01"></path></svg>
+<svg class="w-10 h-10 text-outline" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 8v4m0 4h.01"></path></svg>
 <p class="text-body-lg">هیچ محصولی با معیارهای جستجو یافت نشد.</p>
 <button class="mt-2 inline-flex items-center gap-2 bg-surface-container-high hover:bg-surface-variant border border-aged-gold/40 text-secondary hover:text-aged-gold px-4 py-2 text-label-sm font-medium rounded transition-colors cursor-pointer" id="empty-reset-filters-btn" type="button">
-<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-<span>حذف فیلترها و مشاهده همه محصولات</span>
+<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+<span class="">حذف فیلترها و مشاهده همه محصولات</span>
 </button>
 </div>
 <!-- Pagination -->
-<div class="mt-12 flex items-center justify-center gap-2" id="pagination-container"></div>
+<div class="mt-12 flex items-center justify-center gap-2" id="pagination-container" style="display: flex;"><button class="w-10 h-10 border border-surface-variant flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-colors opacity-40 cursor-not-allowed" disabled=""><svg class="w-4 h-4 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></button><button class="w-10 h-10 border border-secondary bg-secondary/10 text-secondary font-bold flex items-center justify-center transition-colors cursor-pointer text-sm">۱</button><button class="w-10 h-10 border border-surface-variant text-on-surface-variant hover:border-secondary hover:text-secondary flex items-center justify-center transition-colors cursor-pointer text-sm">۲</button><button class="w-10 h-10 border border-surface-variant flex items-center justify-center text-on-surface-variant hover:border-secondary hover:text-secondary transition-colors cursor-pointer"><svg class="w-4 h-4 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg></button></div>
 </div>
 </section>
 </main>
-<!-- Cart Backdrop Overlay -->
-<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300 opacity-0 pointer-events-none" id="cart-backdrop"></div>
-<!-- Cart Drawer / Two-Step Slide Panel -->
-<aside class="fixed top-0 right-0 h-full w-full sm:w-[480px] bg-[#131313] border-l border-surface-container-high z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col overflow-hidden" id="cart-drawer">
-<div class="drawer-slider flex flex-row w-[200%] h-full">
-<!-- Step 1: Cart Items Panel -->
-<div class="w-1/2 h-full flex flex-col justify-between flex-shrink-0 bg-[#131313]">
-<div class="p-6 border-b border-surface-container-high flex items-center justify-between shrink-0">
-<div class="flex items-center gap-3">
-<button class="text-on-surface-variant hover:text-secondary transition-colors p-1 cursor-pointer" id="close-cart-btn" title="بستن سبد خرید" type="button">
-<svg class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
-</button>
-<h2 class="text-headline-lg font-bold text-secondary flex items-center gap-2">
-<span>سبد خرید</span>
-<span class="text-sm font-normal text-on-surface-variant">(<span class="cart-count-badge font-medium text-on-surface-variant" id="drawer-cart-count">۰</span> طعم)</span>
-</h2>
-</div>
-<div class="text-xs text-on-surface-variant bg-surface-container-high px-2.5 py-1 rounded border border-surface-variant/40">
-          مرحله ۱ از ۲
-        </div>
-</div>
-<!-- Items Scroll -->
-<div class="flex-1 overflow-y-auto p-6 space-y-4">
-<div class="space-y-4 flex-col hidden" id="cart-items-list"></div>
-<div class="flex flex-col items-center justify-center text-center pb-8 text-on-surface-variant gap-3" id="empty-cart-msg">
-<div class="bg-[#232323] border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-center text-center max-w-sm w-full mx-auto shadow-2xl backdrop-blur-md">
-<div class="w-16 h-16 rounded-full bg-[#37332c] border border-[#c97a3e]/30 flex items-center justify-center mb-4 text-[#e9c176] shadow-[0_0_16px_rgba(211,84,0,0.18)]">
-<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewbox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
-</div>
-<h3 class="font-bold text-[#e9c176] text-base mb-1.5">سبد خرید شما خالی است</h3>
-<p class="text-[#e2bfb4] text-sm leading-relaxed mb-6 font-normal">محصولات ما را بررسی کرده<br/>و طعم و عطر اصیل را به سبد خود بیفزایید</p>
-<button class="group bg-[#d35400] hover:bg-[#b04600] text-white font-medium py-2.5 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-[#d35400]/20 active:scale-95 text-sm cursor-pointer w-full" id="empty-explore-btn" type="button">
-<span>مشاهده طعم‌ها</span>
-<svg class="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-</button>
-</div>
-</div>
-</div>
-<!-- Step 1 Footer -->
-<div class="p-6 border-t border-surface-container-high bg-surface-container-lowest/80 backdrop-blur-md shrink-0 space-y-4">
-<div class="space-y-2 text-label-sm">
-<div class="flex justify-between items-center text-on-surface-variant">
-<span>جمع کل اقلام:</span>
-<span class="text-[#e9c176] font-bold text-headline-lg"><span id="cart-total">۰</span> <span class="text-sm font-normal text-[#e9c176] mr-1">تومان</span></span>
-</div>
-<div class="justify-between items-center text-on-surface-variant hidden" id="cart-shipping-row">
-<span>هزینه ارسال:</span>
-<span class="text-secondary font-medium">رایگان</span>
-</div>
-<div class="pt-3 pb-1 border-t border-surface-container-high flex justify-between items-center text-headline-lg font-bold text-on-surface">
-<span class="font-semibold text-body-lg text-white">مبلغ قابل پرداخت:</span>
-<span class="text-white flex items-baseline gap-1.5">
-<span class="font-extrabold text-white tracking-tight text-display-lg-mobile" id="cart-payable">۰</span>
-<span class="text-body-lg font-medium text-white">تومان</span>
-</span>
-</div>
-</div>
-<div class="flex flex-col gap-2.5 pt-2">
-<button class="w-full py-3.5 px-4 bg-burnt-copper hover:bg-primary-container rounded text-center shadow-lg flex items-center justify-center gap-2 group transition-all duration-300 text-white font-bold text-body-lg opacity-50 cursor-not-allowed" disabled="" id="proceed-checkout-btn" type="button">
-<span class="text-[20px] font-extrabold tracking-wide">ثبت سفارش و ادامه</span>
-<svg class="w-5 h-5 shrink-0 transition-transform duration-300 ease-in-out group-hover:-translate-x-1.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24"><path d="M19 12H5"></path><path d="M12 19l-7-7 7-7"></path></svg>
-</button>
-<button class="w-full py-2.5 px-4 text-on-surface-variant hover:text-secondary text-label-sm text-center transition-colors cursor-pointer" id="continue-shopping-btn" type="button">
-            ادامه خرید از فروشگاه
-          </button>
-</div>
-</div>
-</div>
-<!-- Step 2: Checkout Information Panel -->
-<div class="w-1/2 h-full flex flex-col justify-between flex-shrink-0 bg-[#131313]">
-<div class="p-6 border-b border-surface-container-high flex items-center justify-between shrink-0">
-<div class="flex items-center gap-3">
-<button class="text-on-surface-variant hover:text-secondary transition-colors p-1 cursor-pointer flex items-center gap-1 text-label-sm" id="back-to-cart-btn" title="بازگشت به سبد خرید" type="button">
-<svg class="w-5 h-5 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
-</button>
-<h2 class="text-headline-lg font-bold text-secondary">ارسال اطلاعات</h2>
-</div>
-<div class="text-xs text-on-surface-variant bg-surface-container-high px-2.5 py-1 rounded border border-surface-variant/40">
-          مرحله ۲ از ۲
-        </div>
-</div>
-<!-- Checkout Form -->
-<div class="flex-1 overflow-y-auto p-6 space-y-4 text-label-sm">
-<div class="hidden p-3 rounded bg-error-container/20 border border-error/40 text-error text-xs" id="form-error-msg"></div>
-<div class="space-y-1.5">
-<label class="block text-on-surface-variant" for="field-name">نام و نام خانوادگی <span class="text-burnt-copper">*</span></label>
-<input class="w-full bg-surface-container-lowest border border-surface-variant rounded px-3 py-2.5 text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-secondary transition-colors" id="field-name" placeholder="مثال: علی احمدی" type="text"/>
-<p class="hidden text-error text-xs mt-1" id="error-name">لطفاً نام خود را به طور کامل وارد کنید.</p>
-</div>
-<div class="space-y-1.5">
-<label class="block text-on-surface-variant" for="field-phone">شماره تماس <span class="text-burnt-copper">*</span></label>
-<input class="w-full bg-surface-container-lowest border border-surface-variant rounded px-3 py-2.5 text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-secondary transition-colors text-right" dir="ltr" id="field-phone" inputmode="numeric" maxlength="11" placeholder="۰۹۱۲۳۴۵۶۷۸۹" type="tel"/>
-<p class="hidden text-error text-xs mt-1" id="error-phone">شماره تماس باید ۱۱ رقمی و با ۰۹ شروع شود.</p>
-</div>
-<div class="grid grid-cols-2 gap-3">
-<div class="space-y-1.5">
-<label class="block text-on-surface-variant" for="field-province">استان <span class="text-burnt-copper">*</span></label>
-<input class="w-full bg-surface-container-lowest border border-surface-variant rounded px-3 py-2.5 text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-secondary transition-colors" id="field-province" placeholder="مثال: تهران" type="text"/>
-</div>
-<div class="space-y-1.5">
-<label class="block text-on-surface-variant" for="field-city">شهر <span class="text-burnt-copper">*</span></label>
-<input class="w-full bg-surface-container-lowest border border-surface-variant rounded px-3 py-2.5 text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-secondary transition-colors" id="field-city" placeholder="مثال: تهران" type="text"/>
-</div>
-</div>
-<div class="space-y-1.5">
-<label class="block text-on-surface-variant" for="field-postal">کد پستی <span class="text-burnt-copper">*</span></label>
-<input class="w-full bg-surface-container-lowest border border-surface-variant rounded px-3 py-2.5 text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-secondary transition-colors text-right" dir="ltr" id="field-postal" maxlength="10" placeholder="مثال: ۱۲۳۴۵۶۷۸۹۰" type="text"/>
-<p class="hidden text-error text-xs mt-1" id="error-postal">کد پستی معتبر ۱۰ رقمی وارد کنید.</p>
-</div>
-<div class="space-y-1.5">
-<label class="block text-on-surface-variant" for="field-address">آدرس دقیق پستی <span class="text-burnt-copper">*</span></label>
-<textarea class="w-full bg-surface-container-lowest border border-surface-variant rounded px-3 py-2.5 text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-secondary transition-colors leading-relaxed" id="field-address" placeholder="خیابان، کوچه، پلاک، واحد" rows="2"></textarea>
-<p class="hidden text-error text-xs mt-1" id="error-address">لطفاً نشانی کامل پستی خود را بنویسید.</p>
-</div>
-<div class="space-y-1.5">
-<label class="block text-on-surface-variant" for="field-notes">توضیحات سفارش (اختیاری)</label>
-<textarea class="w-full bg-surface-container-lowest border border-surface-variant rounded px-3 py-2.5 text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-secondary transition-colors leading-relaxed" id="field-notes" placeholder="هر گونه توضیح در مورد نحوه ارسال و..." rows="2"></textarea>
-</div>
-</div>
-<!-- Step 2 Footer -->
-<div class="p-6 border-t border-surface-container-high bg-surface-container-lowest/80 backdrop-blur-md shrink-0 space-y-3">
-<button class="w-full py-3.5 px-4 bg-burnt-copper hover:bg-primary-container text-white font-bold text-headline-lg rounded text-center transition-colors shadow-lg flex items-center justify-center gap-2 group opacity-50 cursor-not-allowed" disabled="" id="final-payment-btn" type="button">
-<span>پرداخت نهایی</span>
-<svg class="w-6 h-6 shrink-0 pointer-events-none transform transition-transform duration-300 ease-in-out group-hover:-translate-x-1.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="2" width="20" x="2" y="5"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
-</button>
-<p class="text-center text-xs mt-3 flex items-center justify-center gap-1.5 text-[#e0c0b2]">
-<svg class="w-3.5 h-3.5 inline-block text-[#e0c0b2]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<span>پرداخت امن بانکی در شبکه شتاب</span>
-</p>
-</div>
-</div>
-</div>
-</aside>
+<!-- Cart Drawer Overlay & Container (Aligned to right edge of 1280px container) -->
 <script>
 // Catalog & Initial State
 const fallbackCatalog = [
-  { id: 1, title: "زردچوبه ممتاز قلم", category: "base", categoryName: "ادویه‌های پایه", price: 120000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDEkNMrRyUoyCuS6nh_tW1gkm1qCEyrizmN8LvGRbsqEy3H9r134UfprjC43hyR7q0JWLV_xb582lfu00TzQNS9EHJGsBXP6lKKkYOYeBGzhOd9W8dFcwJIcBLeH2I4tqDq-kJ5R4B5p8pShw0EBVCyJq-AzatuISW3ovkwW35ZGHM4yG-wuTwaitvGQjn0cGMu7cFFte4JIuRqggwD2-se0IF7pWwhtBwq7vHt_R4XMZm9k0uMpqs", isGift: false, popularity: 98 },
-  { id: 2, title: "فلفل سیاه دانه‌درشت", category: "base", categoryName: "ادویه‌های پایه", price: 185000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCyPmCcnZ6edAbFCbmuzWpnyy9jV2qzIfyx6sFlYzLmja7l1XkWWpRrHJ0ERiW7PZRUgFtGVpbuYaOJj5Ng1Umv3SKFHqCfpx1JNCpYl-5HjR4g9zyP_Pun1cEoz-N3G2opbZgKvE_uMc1zvybC7Le7wtz1UB7Hl4s9ra-pAoXh1i-CzbZIP_J_0z7HVAzfVoPHSXHTcxan6146D_W4nKbxG9ZN-Zrb0VhN-fXJEpBLA9wv0p0Yoq8", isGift: false, popularity: 95 },
-  { id: 3, title: "گرام ماسالا اصیل", category: "blends", categoryName: "ترکیبات خاص", price: 240000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAXyrUsvyXkPqghXaN2H1l-IbzjxyMFP62RaYlTTuCzdwT4Ld4a4S4GQ7SRDMdMaKuOSGrgLIL7He3dUySokGnVR7qJJClOfv13epGaeU3AzbsX47XeyJzpUc7R5kYIwK4DoWNZFf6-DW7RcaEpqzMd9pcxq-QRdHlnI1ihUVBgvXfuHkz1zZj9_o34j607dRr_h8YMNcyB1s5iCZPYJLsnoV4jd6VLv7vrZFwjq51WOnvO1H52ZgY", isGift: false, popularity: 92 },
-  { id: 6, title: "پک هدیه امپریال", category: "gifts", categoryName: "پک‌های هدیه", price: 1200000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBgGsWSPzoZ9sk61At0huIG_9C2r7x7N9tSz2C0w3hqDnJVHMsBK1UWDB0BQ2NLENDMOBKSA8w0g8nq7-E5lQFDUQaKmxAug9YHihiEaK27AwdUn2NSdNRuvmaqtiBQDdvJnzaNAeua-PuShYtWrQSGk1LeUD1ZTQXqM1I5AtWS2mV7wAPJmDLLnOQioHKuJLIze5G7WlLFxe1E42SQJ-3PzoZr8mA9MRayb4P4fG2b_ZdO5e61gBI", isGift: true, popularity: 96 }
+  { id: 1, title: "ادویه خورشت", category: "blends", categoryName: "ترکیبات خاص", price: 370000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCjo0drPsrPLiAbhSJeky3ROxSS11vYQFOuj759H9qXjsLRDQMdAcybSsN9ckwrGP_vv_U7O57jdwq11OI8Zh4gaOo3KF80Bo79UanSbQSLYY3zsCD7NaHNn5n3kE0fMKncoZZnE8uexRoh0gfYfZGRWA1HTn1-kNRUwkQ-AybLRr9uV8RBOslNY9IBK-d1GKjxyywKzs34Y98Umon7yf9MzRFCiGxog_QiuTD1tRi33K010M8oA2g", isGift: false, popularity: 92 },
+  { id: 2, title: "ادویه فلافل", category: "blends", categoryName: "ترکیبات خاص", price: 270000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBadTmDx2iUlzsOxHc1DcvlCw1o1Bdg4YYL53dcGEnsg8Rp-X2wqF7MIakCxUf8VhV-G4me8OIssupCxGX_xda-F0o2Kil05vky0XZpGS7f-apYCxPLGRFwjNK27V3jMDu9XNPgRvZ0l1XCH0cqFgbv0uqO8jjRyhHyVtZKvnTXPVLfgCVBv2hPWQIpjgX70G-zZR2GSWQmtpHEr_oQD1MClyziAAhYoMUaz2NcqF2p59OM8V2UL4k", isGift: false, popularity: 91 },
+  { id: 3, title: "ادویه قرمه سبزی", category: "blends", categoryName: "ترکیبات خاص", price: 450000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCjvsjZK_9xCuD8bRg89hbLE_pfusZzI7WxYdN7PqzZe3CtMNlvVNHwUoJ0TWoYNDIvANUGFzk4UECBZ_zvTISSUAV7W5JAggs1TRrDBarHhwbNmM0IfDuTXt24lnHTVhvUXXqFKs_lHSPyQjNc74mNLBVVaTLbikik7gOHHamH2bod69x1-I-EQMqvb_8rNzZIMKS00ShMDWhHC14H5WClBPkMGltdNzch49juP9PUiVrHmhF80d4", isGift: false, popularity: 97 },
+  { id: 4, title: "ادویه ماکارونی", category: "blends", categoryName: "ترکیبات خاص", price: 330000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAgjy0jKEBXmAqjPYzI2IyISWHTKOR_cm8gx4eQJFTUtk5zhH60xAkleXPlzM4aurcw_iNmgZwsa0WbLbfbXVcIrV3NaDEwfILYMr-nhy-dqXplJPHQic0sFMEVqgeU-62LXVBYxSkjGwfzx_Ih573UrSCqanOLPWdCDNT4am0pF110X7FKaaK97rEay9nxSUn9udbYRJZS71MLuRopCHK8uJeAOyZZqhiy1Pvq57TXUEu3vc6OFY0", isGift: false, popularity: 89 },
+  { id: 5, title: "ادویه مرغ", category: "blends", categoryName: "ترکیبات خاص", price: 500000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDqzfvN0ZbS5nNlAK93VKKBDtCSQYqlL3mX51DsWS0LueQyRB3AuqSfq9W83Szocx_Iuql603Do4VsevAKOojq6U81EaL13TZK_cqD2mYic3FxPSRC2R9zvhAs2jHIZ4n9teQ9-ulT_c8OLfFg7hQn96SmQryruqXbZ8vWXxSiQXsuR9lNR44gbp_AXbW9At7u_pRbK3DksyIvyTbu9hXEQMa9HTKMlx3tt_IKMm52MhEOa3EJ-b-E", isGift: false, popularity: 93 },
+  { id: 6, title: "ادویه پاپریکا", category: "base", categoryName: "ادویه‌های پایه", price: 210000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBTlLNOAsEd511QSYLKo7MB3Cp0YluSXg3XLyn5rRwaYafYB0q8MHX_ENEq0QXk3cv2dhAw5-fTGcr1H4j0p5jZIYwQfa8ZkKjjwJPrCKA9_266ScqMF8Ci8K7aOUXVnx8VWW83dBcFZVCzQ-gONWAfjNguEcRUW73u5_TEFDfPiGzjDYo6RL7CyuS4ydfEcVo5EkCOQyFLbd8d-Oc7849KH6nYncb-RAqL2ONXhtMn2KNIAR8xni0", isGift: false, popularity: 88 },
+  { id: 7, title: "زردچوبه اعلا", category: "base", categoryName: "ادویه‌های پایه", price: 180000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBLsiArfvZnRb4e-WEY5YW-hYt3SxIvR4edCTRrJdza79Fz9A8DbgK057h40BflcDupH8UNURJvVEYCLbPDY276-tv7OOHzHpk3DvusbiWyCZWtqGMhyAUBL9gm-EDDh9pA0vjhyj92OIdYXqVnT1_MA0qxk7jpjA-zr8xUsm5Vu1iBHpgQ6vLNZcGkd-VjlG-g_zTLx2XN8NpMBG1oZZSvJREvJ-KxOPnI5BAgcINXuad_PA_uUpA", isGift: false, popularity: 98 },
+  { id: 8, title: "ادویه کاری", category: "base", categoryName: "ادویه‌های پایه", price: 290000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCnYr1DVBiVCdI2-rD73ju3FX7O3XzMFSqSamkgnI0MY-UqRzNtpedA7pz_T4oheLXVwFMAtZINi5mR5ocCrBPKlANKX37EmlZU6DOL1lKQr3tdXGMzyfZpzXq0iRL8NeOqt0UqaxsragdBA-N2t6YPG02fBOStPf8aHCJJ2InNtV5LSluSEPXKdanA0jLwKWR-Lh5O1FWWQskpP_0-Npw2awP7LINFpulSJwGDqZGrVETLpXn-T9E", isGift: false, popularity: 90 },
+  { id: 9, title: "ادویه غذای دریایی", category: "blends", categoryName: "ترکیبات خاص", price: 350000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDRCZx46bgmYVrgOl2ZjuchfITcC3lapHL-1I5xAQ2q9tFR04cgUsMk2itXllnGZLNxtmHHrPcrGwj0FGskjp4deyqmOPgZSsur6r6tX7gobuoNp_zLT2u1LGwG_8g7K3rmBYoy9g7M4MXUdMjOhQ0lGXvw988-OsnZrpqRt7X98vlB-o_wB4wX6Wo_5RDGigocHJcBPdS0Kh7nqqlapGYtS6x259nYEY1ctgVso-CF1_J_Dd78Raw", isGift: false, popularity: 87 },
+  { id: 10, title: "فلفل سیاه دانه‌درشت", category: "base", categoryName: "ادویه‌های پایه", price: 185000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCyPmCcnZ6edAbFCbmuzWpnyy9jV2qzIfyx6sFlYzLmja7l1XkWWpRrHJ0ERiW7PZRUgFtGVpbuYaOJj5Ng1Umv3SKFHqCfpx1JNCpYl-5HjR4g9zyP_Pun1cEoz-N3G2opbZgKvE_uMc1zvybC7Le7wtz1UB7Hl4s9ra-pAoXh1i-CzbZIP_J_0z7HVAzfVoPHSXHTcxan6146D_W4nKbxG9ZN-Zrb0VhN-fXJEpBLA9wv0p0Yoq8", isGift: false, popularity: 95 },
+  { id: 11, title: "پک هدیه امپریال", category: "gifts", categoryName: "پک‌های هدیه", price: 1200000, image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBgGsWSPzoZ9sk61At0huIG_9C2r7x7N9tSz2C0w3hqDnJVHMsBK1UWDB0BQ2NLENDMOBKSA8w0g8nq7-E5lQFDUQaKmxAug9YHihiEaK27AwdUn2NSdNRuvmaqtiBQDdvJnzaNAeua-PuShYtWrQSGk1LeUD1ZTQXqM1I5AtWS2mV7wAPJmDLLnOQioHKuJLIze5G7WlLFxe1E42SQJ-3PzoZr8mA9MRayb4P4fG2b_ZdO5e61gBI", isGift: true, popularity: 96 }
 ];
 
 let catalog = [...fallbackCatalog];
+
+// 1. Initializing cart from LocalStorage using key 'shahtame_cart'
 let cart = [];
+try {
+  const stored = localStorage.getItem('shahtame_cart');
+  if (stored) cart = JSON.parse(stored);
+} catch (e) {
+  cart = [];
+}
+
+// 2. Persistent storage helper
+function saveCartToStorage() {
+  try {
+    localStorage.setItem('shahtame_cart', JSON.stringify(cart));
+  } catch (e) {
+    console.error('Error saving cart to localStorage:', e);
+  }
+}
+
+// Real-time sync across tabs and pages
+window.addEventListener('storage', (e) => {
+  if (e.key === 'shahtame_cart') {
+    try {
+      cart = JSON.parse(e.newValue) || [];
+    } catch {
+      cart = [];
+    }
+    renderCart();
+  }
+});
 
 const DEFAULT_MAX_PRICE = 2500000;
 const PAGE_SIZE = 9;
@@ -712,6 +781,7 @@ function renderPagination(totalPages) {
 
 // Cart State & Drawer Renderer
 function renderCart() {
+  saveCartToStorage();
   const cartList = document.getElementById('cart-items-list');
   const emptyMsg = document.getElementById('empty-cart-msg');
   const totalEl = document.getElementById('cart-total');
@@ -727,7 +797,13 @@ function renderCart() {
   if (drawerBadge) drawerBadge.textContent = formatNumber(totalQuantity);
   if (navBadge) {
     navBadge.textContent = formatNumber(totalQuantity);
-    navBadge.style.display = totalQuantity > 0 ? 'inline-flex' : 'none';
+    if (totalQuantity > 0) {
+      navBadge.style.display = 'inline-flex';
+      navBadge.classList.remove('hidden');
+    } else {
+      navBadge.style.display = 'none';
+      navBadge.classList.add('hidden');
+    }
   }
 
   if (totalEl) totalEl.textContent = formatPrice(totalPrice);
@@ -742,6 +818,7 @@ function renderCart() {
     if (emptyMsg) emptyMsg.style.display = 'none';
     if (cartList) {
       cartList.style.display = 'flex';
+      cartList.classList.remove('hidden');
       cartList.innerHTML = '';
 
       cart.forEach(item => {
@@ -763,7 +840,7 @@ function renderCart() {
             </div>
             <div class="flex justify-between items-end mt-2.5">
               <div class="flex items-center gap-1.5 bg-[#141414] rounded-lg border border-surface-variant/70 px-2 py-0.5">
-                <button class="decrease-cart-item text-on-surface hover:text-burnt-copper transition-colors p-1 cursor-pointer" data-id="${item.id}" type="button" title="کاهش">
+                <button class="decrease-cart-item text-on-surface hover:text-burnt-copper transition-colors p-1 cursor-pointer ${item.quantity <= 1 ? 'opacity-40' : ''}" data-id="${item.id}" type="button" title="کاهش">
                   <svg class="w-3.5 h-3.5 pointer-events-none" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"></path></svg>
                 </button>
                 <span class="text-sm text-secondary min-w-[22px] text-center font-bold">${formatNumber(item.quantity)}</span>
@@ -791,8 +868,12 @@ function renderCart() {
     if (cartList) {
       cartList.innerHTML = '';
       cartList.style.display = 'none';
+      cartList.classList.add('hidden');
     }
-    if (emptyMsg) emptyMsg.style.display = 'flex';
+    if (emptyMsg) {
+      emptyMsg.style.display = 'flex';
+      emptyMsg.classList.remove('hidden');
+    }
 
     if (proceedBtn) {
       proceedBtn.disabled = true;
@@ -819,6 +900,7 @@ function addToCart(productId) {
     });
   }
 
+  saveCartToStorage();
   renderCart();
 
   const navBadge = document.getElementById('cart-nav-badge');
@@ -832,16 +914,61 @@ function updateCartQuantity(productId, delta) {
   const existingIndex = cart.findIndex(item => item.id === Number(productId));
   if (existingIndex === -1) return;
 
-  cart[existingIndex].quantity += delta;
-  if (cart[existingIndex].quantity <= 0) {
-    cart.splice(existingIndex, 1);
+  if (delta < 0) {
+    // Minimum quantity must be 1. Do NOT decrease or delete if quantity is already 1.
+    if (cart[existingIndex].quantity > 1) {
+      cart[existingIndex].quantity -= 1;
+    } else {
+      return;
+    }
+  } else {
+    cart[existingIndex].quantity += delta;
   }
+
+  saveCartToStorage();
   renderCart();
 }
 
 function removeFromCart(productId) {
   cart = cart.filter(item => item.id !== Number(productId));
+  saveCartToStorage();
   renderCart();
+}
+
+// Drawer Visibility Helpers
+function openCart() {
+  const overlay = document.getElementById('cart-drawer-overlay');
+  const drawer = document.getElementById('cart-drawer');
+  if (overlay) {
+    overlay.classList.remove('invisible', 'opacity-0', 'pointer-events-none');
+    overlay.classList.add('visible', 'opacity-100', 'pointer-events-auto');
+  }
+  if (drawer) {
+    drawer.classList.remove('translate-x-full');
+    drawer.classList.add('translate-x-0');
+    drawer.classList.remove('checkout-step-2');
+  }
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCart() {
+  const overlay = document.getElementById('cart-drawer-overlay');
+  const drawer = document.getElementById('cart-drawer');
+  if (drawer) {
+    drawer.classList.add('translate-x-full');
+    drawer.classList.remove('translate-x-0');
+  }
+  if (overlay) {
+    overlay.classList.remove('opacity-100', 'pointer-events-auto');
+    overlay.classList.add('opacity-0', 'pointer-events-none');
+  }
+  setTimeout(() => {
+    if (overlay) {
+      overlay.classList.add('invisible');
+    }
+    document.body.style.overflow = '';
+    if (drawer) drawer.classList.remove('checkout-step-2');
+  }, 300);
 }
 
 // Category and Filter Interactions
@@ -912,51 +1039,24 @@ document.querySelectorAll('input[name="sort"]').forEach(radio => {
   });
 });
 
-// Drawer Navigation Events
-const cartNavBtn = document.getElementById('cart-nav-btn');
-const cartDrawer = document.getElementById('cart-drawer');
-const cartBackdrop = document.getElementById('cart-backdrop');
-const closeCartBtn = document.getElementById('close-cart-btn');
-const continueShoppingBtn = document.getElementById('continue-shopping-btn');
-const emptyExploreBtn = document.getElementById('empty-explore-btn');
 const proceedCheckoutBtn = document.getElementById('proceed-checkout-btn');
 const backToCartBtn = document.getElementById('back-to-cart-btn');
 
-const openCart = () => {
-  cartBackdrop.classList.remove('opacity-0', 'pointer-events-none');
-  cartBackdrop.classList.add('opacity-100');
-  cartDrawer.classList.remove('translate-x-full');
-  document.body.style.overflow = 'hidden';
-  cartDrawer.classList.remove('checkout-step-2');
-};
-
-const closeCart = () => {
-  cartDrawer.classList.add('translate-x-full');
-  cartBackdrop.classList.remove('opacity-100');
-  cartBackdrop.classList.add('opacity-0', 'pointer-events-none');
-  setTimeout(() => {
-    document.body.style.overflow = '';
-    cartDrawer.classList.remove('checkout-step-2');
-  }, 300);
-};
-
-if (cartNavBtn) cartNavBtn.addEventListener('click', openCart);
-if (closeCartBtn) closeCartBtn.addEventListener('click', closeCart);
-if (cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
-if (continueShoppingBtn) continueShoppingBtn.addEventListener('click', closeCart);
-if (emptyExploreBtn) emptyExploreBtn.addEventListener('click', closeCart);
-
 if (proceedCheckoutBtn) {
   proceedCheckoutBtn.addEventListener('click', () => {
-    if (cart.length > 0) {
-      cartDrawer.classList.add('checkout-step-2');
+    const drawer = document.getElementById('cart-drawer');
+    if (cart.length > 0 && drawer) {
+      drawer.classList.add('checkout-step-2');
     }
   });
 }
 
 if (backToCartBtn) {
   backToCartBtn.addEventListener('click', () => {
-    cartDrawer.classList.remove('checkout-step-2');
+    const drawer = document.getElementById('cart-drawer');
+    if (drawer) {
+      drawer.classList.remove('checkout-step-2');
+    }
   });
 }
 
@@ -1090,10 +1190,27 @@ if (finalPaymentBtn) {
   });
 }
 
-// Initialization
+// Immediate execution on startup
 updateCategoryCounts();
 renderProducts();
 renderCart();
 fetchGitHubProducts();
 </script>
-</body></html>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navBtn = document.getElementById('cart-nav-btn');
+  if (navBtn) {
+    navBtn.addEventListener('click', function(e) {
+      if (window.toggleCart) {
+        e.preventDefault();
+        window.toggleCart(true);
+      } else if (window.openCart) {
+        e.preventDefault();
+        window.openCart();
+      }
+    });
+  }
+});
+</script></body></html>
