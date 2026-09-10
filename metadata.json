@@ -1,0 +1,6 @@
+{
+  "name": "شاه طعم - امضای یک غذای به یاد ماندنی",
+  "description": "فروشگاه آنلاین ادویه‌جات لوکس شاه طعم - ارائه دهنده ناب‌ترین و با کیفیت‌ترین ادویه‌جات از سراسر جهان با بسته‌بندی‌های اختصاصی",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
